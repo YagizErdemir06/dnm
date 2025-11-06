@@ -1,0 +1,42 @@
+.class public final synthetic Lw6/p0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public final synthetic a:Lk2/e;
+
+.field public final synthetic b:Landroid/view/View;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lk2/e;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw6/p0;->a:Lk2/e;
+
+    iput-object p2, p0, Lw6/p0;->b:Landroid/view/View;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lw6/p0;->a:Lk2/e;
+
+    iget-object p0, p0, Lw6/p0;->b:Landroid/view/View;
+
+    check-cast p1, Lv8/g3;
+
+    invoke-static {v0, p0, p1}, Lw6/o2;->r0(Lk2/e;Landroid/view/View;Lv8/g3;)V
+
+    return-void
+.end method
