@@ -15,6 +15,7 @@
 .method public static zzh()Lcom/google/android/gms/internal/mlkit_common/zzpo;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzpb;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_common/zzpb;-><init>()V
@@ -25,22 +26,28 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zzf(Z)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zze(Z)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
     sget-object v2, Lcom/google/mlkit/common/sdkinternal/ModelType;->UNKNOWN:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zzd(Lcom/google/mlkit/common/sdkinternal/ModelType;)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
     sget-object v2, Lcom/google/android/gms/internal/mlkit_common/zzlc;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
+    .line 5
     invoke-virtual {v0, v2}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zzb(Lcom/google/android/gms/internal/mlkit_common/zzlc;)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
     sget-object v2, Lcom/google/android/gms/internal/mlkit_common/zzli;->zza:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 6
     invoke-virtual {v0, v2}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zza(Lcom/google/android/gms/internal/mlkit_common/zzli;)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
+    .line 7
     invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzpo;->zzc(I)Lcom/google/android/gms/internal/mlkit_common/zzpo;
 
     return-object v0

@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
@@ -21,6 +22,7 @@
 
     const-string v0, "true"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -42,6 +44,7 @@
     :cond_0
     const-string v0, "false"
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -67,6 +70,7 @@
 
     const-string p0, "boolean"
 
+    .line 3
     invoke-interface {p1, p0, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_2
@@ -83,6 +87,7 @@
 .method public booleanValue()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
@@ -93,6 +98,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     check-cast p1, Lorg/apache/xmlbeans/XmlBoolean;
@@ -117,6 +123,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     if-eqz p0, :cond_0
@@ -135,6 +142,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     check-cast p1, Lorg/apache/xmlbeans/XmlBoolean;
@@ -159,6 +167,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_BOOLEAN:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -167,6 +176,7 @@
 .method public set_boolean(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     return-void
@@ -177,6 +187,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     return-void
@@ -185,6 +196,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Z
@@ -199,6 +211,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/values/JavaBooleanHolder;->_value:Z
 
     if-eqz p0, :cond_0

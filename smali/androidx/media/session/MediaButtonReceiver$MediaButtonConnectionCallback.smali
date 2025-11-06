@@ -1,4 +1,4 @@
-.class Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;
+.class public Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;
 .super Landroid/support/v4/media/MediaBrowserCompat$c;
 .source "SourceFile"
 
@@ -40,12 +40,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroid/support/v4/media/MediaBrowserCompat$c;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mContext:Landroid/content/Context;
 
+    .line 3
     iput-object p2, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mIntent:Landroid/content/Intent;
 
+    .line 4
     iput-object p3, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mPendingResult:Landroid/content/BroadcastReceiver$PendingResult;
 
     return-void
@@ -54,10 +58,12 @@
 .method private finish()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mMediaBrowser:Landroid/support/v4/media/MediaBrowserCompat;
 
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat;->b()V
 
+    .line 2
     iget-object p0, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mPendingResult:Landroid/content/BroadcastReceiver$PendingResult;
 
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver$PendingResult;->finish()V
@@ -70,18 +76,21 @@
 .method public onConnected()V
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat;
 
     iget-object v1, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mMediaBrowser:Landroid/support/v4/media/MediaBrowserCompat;
 
+    .line 2
     invoke-virtual {v2}, Landroid/support/v4/media/MediaBrowserCompat;->h()Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Landroid/support/v4/media/session/MediaControllerCompat;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
+    .line 3
     iget-object v1, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mIntent:Landroid/content/Intent;
 
     const-string v2, "android.intent.extra.KEY_EVENT"
@@ -92,8 +101,10 @@
 
     check-cast v1, Landroid/view/KeyEvent;
 
+    .line 4
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaControllerCompat;->d(Landroid/view/KeyEvent;)Z
 
+    .line 5
     invoke-direct {p0}, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->finish()V
 
     return-void
@@ -102,6 +113,7 @@
 .method public onConnectionFailed()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->finish()V
 
     return-void
@@ -110,6 +122,7 @@
 .method public onConnectionSuspended()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->finish()V
 
     return-void
@@ -126,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->mMediaBrowser:Landroid/support/v4/media/MediaBrowserCompat;
 
     return-void

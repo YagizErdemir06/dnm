@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Graphs$TransposedValueGraph;
+.class public Lcom/google/common/graph/Graphs$TransposedValueGraph;
 .super Lcom/google/common/graph/ForwardingValueGraph;
 .source "SourceFile"
 
@@ -48,8 +48,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/ForwardingValueGraph;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/Graphs$TransposedValueGraph;->graph:Lcom/google/common/graph/ValueGraph;
 
     return-void
@@ -58,6 +60,7 @@
 .method public static synthetic access$100(Lcom/google/common/graph/Graphs$TransposedValueGraph;)Lcom/google/common/graph/ValueGraph;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedValueGraph;->graph:Lcom/google/common/graph/ValueGraph;
 
     return-object p0
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedValueGraph;->graph:Lcom/google/common/graph/ValueGraph;
 
     return-object p0
@@ -194,6 +198,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedValueGraph;->delegate()Lcom/google/common/graph/ValueGraph;
 
     move-result-object p0
@@ -213,6 +218,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedValueGraph;->delegate()Lcom/google/common/graph/ValueGraph;
 
     move-result-object p0

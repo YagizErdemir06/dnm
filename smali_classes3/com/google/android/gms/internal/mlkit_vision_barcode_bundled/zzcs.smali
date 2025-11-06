@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcs;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcs;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcu;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
 .field private zzb:I
 
@@ -56,6 +56,7 @@
 .method public final zza()B
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcs;->zzb:I
 
     iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcs;->zzc:I
@@ -68,12 +69,14 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcs;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb(I)B
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 

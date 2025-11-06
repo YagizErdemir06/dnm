@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

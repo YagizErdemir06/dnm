@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV16;
+.class public final Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV16;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,6 +41,7 @@
 .method public getCodecCount()I
     .locals 0
 
+    .line 1
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result p0
@@ -51,6 +52,7 @@
 .method public getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object p0
@@ -71,6 +73,7 @@
 
     const-string p0, "secure-playback"
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -79,6 +82,7 @@
 
     const-string p0, "video/avc"
 
+    .line 2
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0

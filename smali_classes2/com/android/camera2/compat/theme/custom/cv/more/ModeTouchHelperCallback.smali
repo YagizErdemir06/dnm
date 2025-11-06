@@ -6,37 +6,37 @@
 # static fields
 .field public static final MAX_TOP_ITEM_COUNT:I = 0xa
 
-.field protected static final TAG:Ljava/lang/String; = "ModeTouchHelperCallback"
+.field public static final TAG:Ljava/lang/String; = "ModeTouchHelperCallback"
 
 
 # instance fields
-.field protected isFull:Z
+.field public isFull:Z
 
-.field protected mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field protected final mHandler:Landroid/os/Handler;
+.field public final mHandler:Landroid/os/Handler;
 
-.field protected mItems:Ljava/util/List;
+.field public mItems:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field protected mMoreMode:Lp6/d;
+.field public mMoreMode:Ld/d/a/u6/y4/d;
 
 .field private mNeedUpdate:Z
 
 .field private mOffset:Landroid/graphics/Point;
 
-.field protected mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
+.field public mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
 .field private mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
-.field protected mTargetList:Ljava/util/List;
+.field public mTargetList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -50,22 +50,37 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lp6/d;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Ld/d/a/u6/y4/d;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "items",
+            "moreMode"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">;",
-            "Lp6/d;",
+            "Ld/d/a/u6/y4/d;",
             ")V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -78,26 +93,33 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
+    .line 5
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
 
+    .line 6
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mItems:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 7
+    iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
+    .line 8
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetRect:Landroid/graphics/Rect;
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->initDrawable(Landroid/content/Context;)V
 
     return-void
@@ -111,10 +133,21 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
     invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;-><init>(Landroid/content/Context;)V
@@ -137,7 +170,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "toPos"
+        }
     .end annotation
 
     const/4 v0, 0x2
@@ -148,6 +192,7 @@
 
     move v3, v2
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -159,6 +204,7 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v4
@@ -186,9 +232,10 @@
 
     sub-int/2addr p1, v0
 
-    iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 3
+    iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
-    invoke-interface {v4}, Lp6/d;->v7()I
+    invoke-interface {v4}, Ld/d/a/u6/y4/d;->k4()I
 
     move-result v4
 
@@ -202,9 +249,10 @@
 
     sub-int/2addr p2, v0
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 4
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
-    invoke-interface {p1}, Lp6/d;->v7()I
+    invoke-interface {p1}, Ld/d/a/u6/y4/d;->k4()I
 
     move-result p1
 
@@ -216,9 +264,10 @@
 
     aput p1, v1, v2
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 5
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
-    invoke-interface {p0}, Lp6/d;->v7()I
+    invoke-interface {p0}, Ld/d/a/u6/y4/d;->k4()I
 
     move-result p0
 
@@ -237,9 +286,10 @@
 
     sub-int/2addr p2, v0
 
-    iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 6
+    iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
-    invoke-interface {v3}, Lp6/d;->v7()I
+    invoke-interface {v3}, Ld/d/a/u6/y4/d;->k4()I
 
     move-result v3
 
@@ -253,9 +303,10 @@
 
     aput v3, v1, v2
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Lp6/d;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mMoreMode:Ld/d/a/u6/y4/d;
 
-    invoke-interface {p0}, Lp6/d;->v7()I
+    invoke-interface {p0}, Ld/d/a/u6/y4/d;->k4()I
 
     move-result p0
 
@@ -284,16 +335,29 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "current",
+            "target"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    if-eq v0, v2, :cond_6
+    if-eq v0, v1, :cond_6
 
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -305,6 +369,7 @@
 
     goto/16 :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -324,8 +389,9 @@
 
     if-ge v0, v3, :cond_1
 
-    return v1
+    return v2
 
+    .line 3
     :cond_1
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -345,8 +411,9 @@
 
     if-le v0, v3, :cond_2
 
-    return v1
+    return v2
 
+    .line 4
     :cond_2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -354,6 +421,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 5
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
 
     move-result v0
@@ -362,14 +430,16 @@
 
     if-lt v0, v3, :cond_5
 
+    .line 6
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
 
     move-result v0
 
     if-ge v0, v3, :cond_5
 
-    move v0, v1
+    move v0, v2
 
+    .line 7
     :goto_0
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -381,6 +451,7 @@
 
     if-ge v0, v3, :cond_5
 
+    .line 8
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v3
@@ -397,36 +468,42 @@
 
     if-le v0, v3, :cond_4
 
+    .line 9
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
 
     if-nez p1, :cond_3
 
-    const-string p1, "favorite mode full!"
+    new-array p1, v2, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "ModeTouchHelperCallback"
 
-    const-string p3, "ModeTouchHelperCallback"
+    const-string p3, "favorite mode full!"
 
-    invoke-static {p3, p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 10
+    invoke-static {p2, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
+    .line 11
+    iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
 
+    .line 12
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
 
-    const p1, 0x7f1406e5
+    const p1, 0x7f13069c
 
-    invoke-static {p0, p1}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, p1}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
-    invoke-static {}, Lk9/a;->B0()V
+    .line 13
+    invoke-static {}, Ld/d/a/v7/f;->x0()V
 
     :cond_3
-    return v1
+    return v2
 
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 14
     :cond_5
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->canDropOver(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
@@ -436,7 +513,7 @@
 
     :cond_6
     :goto_1
-    return v1
+    return v2
 .end method
 
 .method public clearView(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -449,10 +526,22 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "viewHolder"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->clearView(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 2
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -460,18 +549,22 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 4
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->calculatePos(Landroidx/recyclerview/widget/RecyclerView;I)[I
 
     move-result-object v0
 
+    .line 6
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
@@ -480,7 +573,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f1406dc
+    const v2, 0x7f130693
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -515,17 +608,19 @@
     invoke-virtual {p2, p0}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const-string p0, "clearView "
+    new-array p0, v1, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "ModeTouchHelperCallback"
 
-    const-string v0, "ModeTouchHelperCallback"
+    const-string v0, "clearView "
 
-    invoke-static {v0, p0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 7
+    invoke-static {p2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p0, 0x0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    .line 8
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -540,64 +635,81 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "viewHolder"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x4
 
-    const/4 v1, 0x4
+    const/4 v1, 0x3
 
-    const/4 v2, 0x3
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v3, :cond_1
 
+    .line 2
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
 
-    const/4 v0, 0x6
+    const/4 v3, 0x6
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v3, :cond_1
 
+    .line 3
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
 
-    const/4 v0, 0x2
+    const/4 v3, 0x2
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v3, :cond_1
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
-
-    move-result p1
-
-    if-eq p1, v2, :cond_1
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
-
-    move-result p1
-
-    const/16 v0, 0x9
-
-    if-eq p1, v0, :cond_1
-
+    .line 4
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
 
     if-eq p1, v1, :cond_1
 
+    .line 5
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
 
-    const/16 v0, 0xa
+    const/16 v3, 0x9
 
-    if-ne p1, v0, :cond_0
+    if-eq p1, v3, :cond_1
+
+    .line 6
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
+
+    move-result p1
+
+    if-eq p1, v0, :cond_1
+
+    .line 7
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
+
+    move-result p1
+
+    const/16 v3, 0xa
+
+    if-ne p1, v3, :cond_0
 
     goto :goto_0
 
@@ -608,21 +720,23 @@
 
     :cond_1
     :goto_0
-    move p1, v3
+    move p1, v2
 
+    .line 8
     :goto_1
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
-    move-result v0
+    move-result v3
 
-    if-ne v0, v2, :cond_2
+    if-ne v3, v1, :cond_2
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
+    .line 9
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
@@ -631,7 +745,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f1406de
+    const v0, 0x7f130695
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -641,19 +755,21 @@
 
     goto :goto_2
 
+    .line 10
     :cond_2
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
-    move-result v0
+    move-result v1
 
-    if-ne v0, v1, :cond_3
+    if-ne v1, v0, :cond_3
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 11
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
@@ -662,7 +778,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f1406df
+    const v0, 0x7f130696
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -670,9 +786,10 @@
 
     invoke-virtual {p2, p0}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
+    .line 12
     :cond_3
     :goto_2
-    invoke-static {p1, v3}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->makeMovementFlags(II)I
+    invoke-static {p1, v2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->makeMovementFlags(II)I
 
     move-result p0
 
@@ -697,17 +814,41 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "c",
+            "recyclerView",
+            "viewHolder",
+            "dX",
+            "dY",
+            "actionState",
+            "isCurrentlyActive"
+        }
+    .end annotation
 
+    .line 1
     invoke-super/range {p0 .. p7}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->onChildDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;FFIZ)V
 
+    .line 2
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mNeedUpdate:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mNeedUpdate:Z
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetRect:Landroid/graphics/Rect;
 
     float-to-int p2, p4
@@ -720,6 +861,7 @@
 
     invoke-virtual {p1, p2, p3}, Landroid/graphics/Rect;->offset(II)V
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetRect:Landroid/graphics/Rect;
@@ -736,12 +878,24 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "!isSupportThemeCV"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewHolder",
+            "actionState"
+        }
+    .end annotation
+
+    .line 1
     instance-of p2, p1, Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -750,24 +904,28 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     check-cast p1, Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
+    .line 3
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f080e21
+    const p2, 0x7f080e14
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p0, v0, v1}, Lz1/f;->k(Landroid/view/View;FF)V
+    invoke-static {p0, v0, v1}, Ld/d/a/f6/f;->k(Landroid/view/View;FF)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
@@ -777,12 +935,14 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1, v0}, Lz1/f;->k(Landroid/view/View;FF)V
+    invoke-static {p1, v1, v0}, Ld/d/a/f6/f;->k(Landroid/view/View;FF)V
 
+    .line 7
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mSelectViewHolder:Lcom/android/camera/fragment/mode/ModeViewHolderNormal;
 
     :goto_0
@@ -803,7 +963,20 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "viewHolder",
+            "target"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -828,10 +1001,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v1
@@ -843,6 +1018,7 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mItems:Ljava/util/List;
 
     add-int/lit8 v4, v2, -0x1
@@ -859,6 +1035,7 @@
     :goto_1
     if-le v2, v1, :cond_1
 
+    .line 5
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mItems:Ljava/util/List;
 
     add-int/lit8 v4, v2, -0x1
@@ -871,21 +1048,25 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
+    .line 7
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
     invoke-interface {v2, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     invoke-virtual {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->calculatePos(Landroidx/recyclerview/widget/RecyclerView;I)[I
 
     move-result-object p3
 
+    .line 9
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;
@@ -896,6 +1077,7 @@
 
     invoke-virtual {v2, v3, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 10
     :cond_2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -903,6 +1085,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 11
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p0
@@ -929,54 +1112,77 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "recyclerView",
+            "viewHolder",
+            "fromPos",
+            "target",
+            "toPos",
+            "x",
+            "y"
+        }
+    .end annotation
 
+    .line 1
     invoke-super/range {p0 .. p7}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->onMoved(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILandroidx/recyclerview/widget/RecyclerView$ViewHolder;III)V
 
-    const-string v0, "[onMoved]"
+    const-string v0, "ModeTouchHelperCallback"
 
-    const-string v1, "ModeTouchHelperCallback"
+    const-string v1, "[onMoved]"
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 3
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "onMoved "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, ", pos : "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p3, "->"
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p3, ", point : "
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p3, "x"
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p3
 
@@ -984,30 +1190,37 @@
 
     new-array p6, p5, [Ljava/lang/Object;
 
-    invoke-static {v1, p3, p6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p3, p6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    .line 4
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     if-nez p3, :cond_0
 
+    .line 5
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-virtual {p1, p3}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
+    .line 6
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
+    .line 7
     iget-object p6, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
     invoke-virtual {p6, p3}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
+    .line 8
     iget-object p6, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
-    invoke-virtual {p1, p6}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p6}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p1, p3}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+    .line 9
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
+    .line 10
     new-instance p6, Landroid/graphics/Point;
 
     iget p7, p3, Landroid/graphics/Rect;->left:I
@@ -1018,6 +1231,7 @@
 
     iput-object p6, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mOffset:Landroid/graphics/Point;
 
+    .line 11
     :cond_0
     invoke-virtual {p4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -1027,6 +1241,7 @@
 
     if-eq p3, p6, :cond_3
 
+    .line 12
     invoke-virtual {p4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p3
@@ -1037,6 +1252,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_1
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -1044,12 +1260,14 @@
 
     if-eqz p1, :cond_2
 
+    .line 14
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
+    .line 15
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetRect:Landroid/graphics/Rect;
 
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mOffset:Landroid/graphics/Point;
@@ -1064,6 +1282,7 @@
 
     invoke-virtual {p1, p3, p2}, Landroid/graphics/Rect;->offset(II)V
 
+    .line 16
     :cond_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
 
@@ -1071,10 +1290,12 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;->setAlpha(I)V
 
+    .line 17
     iput-boolean p6, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mNeedUpdate:Z
 
     goto :goto_1
 
+    .line 18
     :cond_3
     :goto_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetDrawable:Lcom/android/camera2/compat/theme/custom/cv/more/SelectDrawable;
@@ -1091,9 +1312,21 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewHolder",
+            "actionState"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->onSelectedChanged(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1118,31 +1351,37 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->onItemDrag(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
     if-nez p1, :cond_0
 
+    .line 4
     iget-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
 
     if-eqz p2, :cond_0
 
     const/4 p2, 0x0
 
+    .line 5
     iput-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->isFull:Z
 
     :cond_0
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 6
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
+    .line 7
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
+    .line 8
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mContext:Landroid/content/Context;
@@ -1151,7 +1390,7 @@
 
     move-result-object p0
 
-    const p2, 0x7f1406db
+    const p2, 0x7f130692
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1169,7 +1408,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewHolder",
+            "i"
+        }
     .end annotation
 
     return-void

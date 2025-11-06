@@ -12,6 +12,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +23,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
     move-result p0
@@ -34,6 +36,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
 
     move-result p0

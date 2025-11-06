@@ -1,4 +1,4 @@
-.class Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
+.class public Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
 .source "SourceFile"
 
@@ -27,15 +27,14 @@
 
 
 # instance fields
-.field isOpen:Z
-
-.field mLockMode:I
+.field public isOpen:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState$1;
 
     invoke-direct {v0}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState$1;-><init>()V
@@ -54,26 +53,19 @@
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p2, 0x1
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->isOpen:Z
-
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->mLockMode:I
+    iput-boolean p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->isOpen:Z
 
     return-void
 .end method
@@ -92,13 +84,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->isOpen:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p0, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->mLockMode:I
+    .line 2
+    iget-boolean p0, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->isOpen:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 

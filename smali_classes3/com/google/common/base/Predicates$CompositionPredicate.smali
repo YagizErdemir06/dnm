@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$CompositionPredicate;
+.class public Lcom/google/common/base/Predicates$CompositionPredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,7 +37,7 @@
 
 
 # instance fields
-.field final f:Lcom/google/common/base/Function;
+.field public final f:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field final p:Lcom/google/common/base/Predicate;
+.field public final p:Lcom/google/common/base/Predicate;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Predicate<",
@@ -116,6 +116,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->p:Lcom/google/common/base/Predicate;
 
     iget-object p0, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
@@ -138,14 +139,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Predicates$CompositionPredicate;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Predicates$CompositionPredicate;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
 
     iget-object v2, p1, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
@@ -175,6 +179,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->f:Lcom/google/common/base/Function;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -195,6 +200,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Predicates$CompositionPredicate;->p:Lcom/google/common/base/Predicate;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

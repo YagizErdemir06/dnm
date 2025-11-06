@@ -1,6 +1,9 @@
 .class public Lmiuix/pickerwidget/widget/NumberPicker$l;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -9,153 +12,373 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = "l"
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lmiuix/pickerwidget/widget/NumberPicker$l$a;
-    }
 .end annotation
 
 
 # static fields
-.field public static final a:Lmiuix/pickerwidget/widget/NumberPicker$l$a;
-
-.field public static final b:I = 0x0
-
 .field public static final c:I = 0x1
 
 .field public static final d:I = 0x2
 
 
+# instance fields
+.field private final f:I
+
+.field private final g:I
+
+.field private j:I
+
+.field private m:I
+
+.field public final synthetic n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lmiuix/pickerwidget/widget/NumberPicker$l$a;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker$l$a;-><init>(Lmiuix/pickerwidget/widget/NumberPicker$a;)V
-
-    sput-object v0, Lmiuix/pickerwidget/widget/NumberPicker$l;->a:Lmiuix/pickerwidget/widget/NumberPicker$l$a;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Looper;)V
+.method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    .line 1
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 p1, 0x1
+
+    .line 2
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->f:I
+
+    const/4 p1, 0x2
+
+    .line 3
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;I)V
+.method public a(I)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/pickerwidget/widget/NumberPicker$l;->c()V
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->m:I
+
+    .line 3
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->j:I
+
+    .line 4
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public b(I)V
     .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/pickerwidget/widget/NumberPicker$l;->c()V
+
+    const/4 v0, 0x2
+
+    .line 2
+    iput v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->m:I
+
+    .line 3
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->j:I
+
+    .line 4
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {p1, p0}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 5
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, p2, v0}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+    .line 1
+    iput v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->m:I
 
-    move-result-object p2
+    .line 2
+    iput v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->j:I
 
-    iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+    .line 3
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-virtual {p0, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, p0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    return-void
-.end method
+    .line 4
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-.method public b()V
-    .locals 1
+    invoke-static {v1}, Lmiuix/pickerwidget/widget/NumberPicker;->f(Lmiuix/pickerwidget/widget/NumberPicker;)Z
 
-    const/4 v0, 0x1
+    move-result v1
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    .line 5
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-static {v1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->g(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
 
-    return-void
-.end method
+    .line 6
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-.method public c(I)V
-    .locals 2
+    invoke-static {v1}, Lmiuix/pickerwidget/widget/NumberPicker;->i(Lmiuix/pickerwidget/widget/NumberPicker;)I
 
-    const/4 v0, 0x2
+    move-result v2
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-virtual {p0, v0, p1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getRight()I
 
-    move-result-object p1
+    move-result v3
 
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    iget-object v4, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    return-void
-.end method
+    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getBottom()I
 
-.method public d()V
-    .locals 1
+    move-result v4
 
-    const/4 v0, 0x1
+    invoke-virtual {v1, v0, v2, v3, v4}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
-
-    return-void
-.end method
-
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
-
-    iget p0, p1, Landroid/os/Message;->what:I
-
-    if-eqz p0, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_0
-
-    goto :goto_0
-
+    .line 7
     :cond_0
-    sget-object p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->a:Lmiuix/pickerwidget/widget/NumberPicker$l$a;
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    iget p1, p1, Landroid/os/Message;->arg1:I
+    invoke-static {v1}, Lmiuix/pickerwidget/widget/NumberPicker;->j(Lmiuix/pickerwidget/widget/NumberPicker;)Z
 
-    invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/NumberPicker$l$a;->c(I)V
+    move-result v1
 
-    goto :goto_0
+    if-eqz v1, :cond_1
+
+    .line 8
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->k(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+
+    .line 9
+    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v2
+
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->m(Lmiuix/pickerwidget/widget/NumberPicker;)I
+
+    move-result p0
+
+    invoke-virtual {v1, v0, v0, v2, p0}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
     :cond_1
-    sget-object p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->a:Lmiuix/pickerwidget/widget/NumberPicker$l$a;
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lmiuix/pickerwidget/widget/NumberPicker$l$a;->b()V
+.method public run()V
+    .locals 6
+
+    .line 1
+    iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->m:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_5
+
+    if-eq v0, v1, :cond_0
+
+    goto/16 :goto_0
+
+    .line 2
+    :cond_0
+    iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->j:I
+
+    if-eq v0, v3, :cond_3
+
+    if-eq v0, v1, :cond_1
+
+    goto/16 :goto_0
+
+    .line 3
+    :cond_1
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->j(Lmiuix/pickerwidget/widget/NumberPicker;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 4
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    .line 5
+    invoke-static {}, Landroid/view/ViewConfiguration;->getPressedStateDuration()I
+
+    move-result v1
+
+    int-to-long v4, v1
+
+    .line 6
+    invoke-virtual {v0, p0, v4, v5}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 7
+    :cond_2
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->l(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
+
+    .line 8
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v1
+
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->m(Lmiuix/pickerwidget/widget/NumberPicker;)I
+
+    move-result p0
+
+    invoke-virtual {v0, v2, v2, v1, p0}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
     goto :goto_0
 
-    :cond_2
-    sget-object p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->a:Lmiuix/pickerwidget/widget/NumberPicker$l$a;
+    .line 9
+    :cond_3
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->f(Lmiuix/pickerwidget/widget/NumberPicker;)Z
 
-    check-cast v0, Landroid/content/Context;
+    move-result v0
 
-    iget p1, p1, Landroid/os/Message;->arg1:I
+    if-nez v0, :cond_4
 
-    invoke-virtual {p0, v0, p1}, Lmiuix/pickerwidget/widget/NumberPicker$l$a;->a(Landroid/content/Context;I)V
+    .line 10
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    .line 11
+    invoke-static {}, Landroid/view/ViewConfiguration;->getPressedStateDuration()I
+
+    move-result v1
+
+    int-to-long v4, v1
+
+    .line 12
+    invoke-virtual {v0, p0, v4, v5}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 13
+    :cond_4
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->h(Lmiuix/pickerwidget/widget/NumberPicker;I)Z
+
+    .line 14
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->i(Lmiuix/pickerwidget/widget/NumberPicker;)I
+
+    move-result v1
+
+    iget-object v3, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v3
+
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBottom()I
+
+    move-result p0
+
+    invoke-virtual {v0, v2, v1, v3, p0}, Landroid/widget/LinearLayout;->invalidate(IIII)V
+
+    goto :goto_0
+
+    .line 15
+    :cond_5
+    iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->j:I
+
+    if-eq v0, v3, :cond_7
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    .line 16
+    :cond_6
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->k(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+
+    .line 17
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v1
+
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->m(Lmiuix/pickerwidget/widget/NumberPicker;)I
+
+    move-result p0
+
+    invoke-virtual {v0, v2, v2, v1, p0}, Landroid/widget/LinearLayout;->invalidate(IIII)V
+
+    goto :goto_0
+
+    .line 18
+    :cond_7
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->g(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+
+    .line 19
+    iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->i(Lmiuix/pickerwidget/widget/NumberPicker;)I
+
+    move-result v1
+
+    iget-object v3, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getRight()I
+
+    move-result v3
+
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$l;->n:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBottom()I
+
+    move-result p0
+
+    invoke-virtual {v0, v2, v1, v3, p0}, Landroid/widget/LinearLayout;->invalidate(IIII)V
 
     :goto_0
     return-void

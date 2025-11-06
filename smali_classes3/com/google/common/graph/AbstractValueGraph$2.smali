@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/AbstractValueGraph$2;
+.class public Lcom/google/common/graph/AbstractValueGraph$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$graph:Lcom/google/common/graph/ValueGraph;
+.field public final synthetic val$graph:Lcom/google/common/graph/ValueGraph;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/ValueGraph;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/AbstractValueGraph$2;->val$graph:Lcom/google/common/graph/ValueGraph;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

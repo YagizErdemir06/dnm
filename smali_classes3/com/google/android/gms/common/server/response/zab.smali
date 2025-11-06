@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/server/response/zab;
+.class public final Lcom/google/android/gms/common/server/response/zab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/server/response/FastParser;->zad(Lcom/google/android/gms/common/server/response/FastParser;Ljava/io/BufferedReader;)J
 
     move-result-wide p0

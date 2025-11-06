@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/photos/vision/barhopper/zzl;
 
     invoke-direct {v0}, Lcom/google/photos/vision/barhopper/zzl;-><init>()V
@@ -30,6 +31,7 @@
 
     const-class v1, Lcom/google/photos/vision/barhopper/zzl;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzU(Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;)V
 
     return-void
@@ -38,12 +40,14 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
     const-string v0, ""
 
     iput-object v0, p0, Lcom/google/photos/vision/barhopper/zzl;->zze:Ljava/lang/String;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzO()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzel;
 
     move-result-object v0
@@ -92,6 +96,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/photos/vision/barhopper/zzl;->zza:Lcom/google/photos/vision/barhopper/zzl;
 
@@ -100,6 +105,7 @@
     :cond_1
     new-instance p1, Lcom/google/photos/vision/barhopper/zzk;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/photos/vision/barhopper/zzk;-><init>(Lcom/google/photos/vision/barhopper/zza;)V
 
     return-object p1
@@ -107,6 +113,7 @@
     :cond_2
     new-instance p0, Lcom/google/photos/vision/barhopper/zzl;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/photos/vision/barhopper/zzl;-><init>()V
 
     return-object p0
@@ -128,6 +135,7 @@
 
     aput-object p0, p1, v0
 
+    .line 4
     const-class p0, Lcom/google/photos/vision/barhopper/zzaa;
 
     aput-object p0, p1, p3
@@ -142,6 +150,7 @@
 
     return-object p0
 
+    .line 5
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

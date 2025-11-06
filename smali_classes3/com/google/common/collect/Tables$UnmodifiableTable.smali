@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Tables$UnmodifiableTable;
+.class public Lcom/google/common/collect/Tables$UnmodifiableTable;
 .super Lcom/google/common/collect/ForwardingTable;
 .source "SourceFile"
 
@@ -37,7 +37,7 @@
 
 
 # instance fields
-.field final delegate:Lcom/google/common/collect/Table;
+.field public final delegate:Lcom/google/common/collect/Table;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Table<",
@@ -58,8 +58,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingTable;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -84,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->cellSet()Ljava/util/Set;
 
     move-result-object p0
@@ -98,6 +101,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -119,6 +123,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingTable;->column(Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object p0
@@ -140,6 +145,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->columnKeySet()Ljava/util/Set;
 
     move-result-object p0
@@ -163,10 +169,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Tables;->access$000()Lcom/google/common/base/Function;
 
     move-result-object v0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->columnMap()Ljava/util/Map;
 
     move-result-object p0
@@ -232,6 +240,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -249,6 +258,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -278,6 +288,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -299,6 +310,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingTable;->row(Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object p0
@@ -320,6 +332,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->rowKeySet()Ljava/util/Set;
 
     move-result-object p0
@@ -343,10 +356,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Tables;->access$000()Lcom/google/common/base/Function;
 
     move-result-object v0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->rowMap()Ljava/util/Map;
 
     move-result-object p0
@@ -372,6 +387,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingTable;->values()Ljava/util/Collection;
 
     move-result-object p0

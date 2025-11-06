@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand$1;-><init>()V
@@ -128,10 +129,12 @@
 .method public static parseFromSection(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
@@ -141,6 +144,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand$Event;->access$400(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand$Event;
 
     move-result-object v3
@@ -151,6 +155,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
@@ -164,12 +169,14 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;->events:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p2
 
+    .line 2
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v0, 0x0
@@ -177,6 +184,7 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;->events:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;

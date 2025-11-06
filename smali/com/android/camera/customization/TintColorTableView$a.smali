@@ -15,5 +15,13 @@
 
 
 # virtual methods
-.method public abstract h9(I)V
+.method public abstract n5(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "colorIndex"
+        }
+    .end annotation
 .end method

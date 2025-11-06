@@ -26,192 +26,623 @@
 
 
 # static fields
-.field public static final i:Ljava/lang/String; = "VPWorkspaceAdapter"
+.field private static final c:Ljava/lang/String; = "VPWorkspaceAdapter"
 
-.field public static final j:I = 0x1f4
+.field private static final d:I = 0x1f4
 
-.field public static final k:I = 0x1
+.field private static final f:I = 0x1
 
-.field public static final l:I = 0x2
+.field private static final g:I = 0x2
 
-.field public static final m:I = 0x3
+.field private static final j:I = 0x3
 
 
 # instance fields
-.field public a:Landroid/app/Activity;
+.field private k0:Ld/o/t/g/b/c0$f;
 
-.field public b:Ljava/util/List;
+.field private m:Landroid/app/Activity;
+
+.field private n:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/xiaomi/microfilm/vlogpro/vp/b;",
+            "Ld/o/t/g/b/j0;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public c:Lcom/bumptech/glide/request/RequestOptions;
+.field private p:Lcom/bumptech/glide/request/RequestOptions;
 
-.field public d:Lmiuix/appcompat/app/AlertDialog;
+.field private s:Lmiuix/appcompat/app/AlertDialog;
 
-.field public e:Lio/reactivex/disposables/Disposable;
+.field private t:Lio/reactivex/disposables/Disposable;
 
-.field public f:Landroid/widget/EditText;
+.field private u:Landroid/widget/EditText;
 
-.field public g:Landroid/widget/TextView;
-
-.field public h:Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
+.field private w:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Ljava/util/List;Lcom/xiaomi/microfilm/vlogpro/vp/a$f;)V
+.method public constructor <init>(Landroid/app/Activity;Ljava/util/List;Ld/o/t/g/b/c0$f;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "activity",
+            "workspaceItemList",
+            "onClickListener"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/app/Activity;",
             "Ljava/util/List<",
-            "Lcom/xiaomi/microfilm/vlogpro/vp/b;",
+            "Ld/o/t/g/b/j0;",
             ">;",
-            "Lcom/xiaomi/microfilm/vlogpro/vp/a$f;",
+            "Ld/o/t/g/b/c0$f;",
             ")V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    .line 2
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
+    .line 3
+    iput-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
 
+    .line 4
     new-instance p1, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {p1}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->c:Lcom/bumptech/glide/request/RequestOptions;
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->p:Lcom/bumptech/glide/request/RequestOptions;
 
+    .line 5
     sget-object p2, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->NONE:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     invoke-virtual {p1, p2}, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    iput-object p3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->h:Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
+    .line 6
+    iput-object p3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->k0:Ld/o/t/g/b/c0$f;
 
     return-void
 .end method
 
-.method public static synthetic h(Ls8/a;Ljava/lang/String;)Landroid/util/Pair;
+.method private D(Ljava/lang/String;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "text",
+            "index"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->p(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld/o/t/g/b/j0;
+
+    .line 3
+    invoke-virtual {v0, p1}, Ld/o/t/g/b/j0;->c(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 4
+    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private E(I)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$b;
+
+    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$b;-><init>(Landroid/content/Context;)V
+
+    .line 2
+    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0050
+
+    const/4 v3, 0x0
+
+    .line 3
+    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    const v2, 0x7f0b0748
+
+    .line 4
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->w:Landroid/widget/TextView;
+
+    const v2, 0x7f0b0747
+
+    .line 5
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/EditText;
+
+    iput-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    .line 6
+    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;
+
+    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    invoke-virtual {v3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0c0033
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v3
+
+    invoke-direct {v2, v3}, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;-><init>(I)V
+
+    .line 7
+    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [Landroid/text/InputFilter;
+
+    const/4 v6, 0x0
+
+    aput-object v2, v5, v6
+
+    invoke-virtual {v3, v5}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
+
+    .line 8
+    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-virtual {v2, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    .line 9
+    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-virtual {v2, p0}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    .line 10
+    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-virtual {v2, v4}, Landroid/widget/EditText;->setFocusable(Z)V
+
+    .line 11
+    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-virtual {v2, v4}, Landroid/widget/EditText;->setFocusableInTouchMode(Z)V
+
+    .line 12
+    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f130c5f
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lmiuix/appcompat/app/AlertDialog$b;->V(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    move-result-object v2
+
+    .line 13
+    invoke-virtual {v2, v1}, Lmiuix/appcompat/app/AlertDialog$b;->Y(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    move-result-object v1
+
+    const v2, 0x7f1303d7
+
+    .line 14
+    invoke-static {v2}, Ld/d/a/z5;->K1(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Ld/o/t/g/b/w;->c:Ld/o/t/g/b/w;
+
+    invoke-virtual {v1, v2, v3}, Lmiuix/appcompat/app/AlertDialog$b;->C(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    .line 15
+    new-instance v1, Ld/d/a/k7/a;
+
+    invoke-direct {v1}, Ld/d/a/k7/a;-><init>()V
+
+    .line 16
+    new-instance v2, Ld/d/a/k7/c;
+
+    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-direct {v2, v3}, Ld/d/a/k7/c;-><init>(Landroid/view/View;)V
+
+    new-instance v3, Ld/d/a/k7/b;
+
+    const v4, 0x7f1303dc
+
+    .line 17
+    invoke-static {v4}, Ld/d/a/z5;->K1(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v0, v4}, Ld/d/a/k7/b;-><init>(Lmiuix/appcompat/app/AlertDialog$b;Ljava/lang/String;)V
+
+    .line 18
+    invoke-static {v2, v3}, Lio/reactivex/Observable;->merge(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
+
+    move-result-object v2
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v4, 0x1f4
+
+    .line 19
+    invoke-virtual {v2, v4, v5, v3}, Lio/reactivex/Observable;->throttleFirst(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
+
+    move-result-object v2
+
+    new-instance v3, Ld/o/t/g/b/x;
+
+    invoke-direct {v3, p0}, Ld/o/t/g/b/x;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)V
+
+    .line 20
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+
+    move-result-object v2
+
+    .line 21
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+
+    move-result-object v2
+
+    new-instance v3, Ld/o/t/g/b/u;
+
+    invoke-direct {v3, v1}, Ld/o/t/g/b/u;-><init>(Ld/d/a/k7/a;)V
+
+    .line 22
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
+
+    move-result-object v1
+
+    sget-object v2, Ld/o/f/u/k;->b:Lio/reactivex/Scheduler;
+
+    .line 23
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
+
+    move-result-object v1
+
+    new-instance v2, Ld/o/t/g/b/y;
+
+    invoke-direct {v2, p0, p1}, Ld/o/t/g/b/y;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;I)V
+
+    .line 24
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->t:Lio/reactivex/disposables/Disposable;
+
+    .line 25
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$b;->f()Lmiuix/appcompat/app/AlertDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
+
+    .line 26
+    new-instance v1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$a;
+
+    invoke-direct {v1, p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$a;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;I)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
+
+    .line 27
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
+
+    .line 28
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->requestFocus()Z
+
+    return-void
+.end method
+
+.method private F(Landroid/view/View;I)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "index"
+        }
+    .end annotation
+
+    const-string v0, "workspace_menu"
+
+    const/4 v1, 0x0
+
+    .line 1
+    invoke-static {v0, v1}, Ld/d/a/v7/f;->W3(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    new-instance v0, Lk/b/f/d;
+
+    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    invoke-direct {v0, v1, p1}, Lk/b/f/d;-><init>(Landroid/content/Context;Landroid/view/View;)V
+
+    .line 3
+    invoke-virtual {v0}, Lk/b/f/d;->d()Landroid/view/Menu;
+
+    move-result-object p1
+
+    const v1, 0x7f130c5d
+
+    invoke-static {v1}, Ld/d/a/z5;->K1(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 4
+    invoke-virtual {v0}, Lk/b/f/d;->d()Landroid/view/Menu;
+
+    move-result-object p1
+
+    const v1, 0x7f130c5f
+
+    invoke-static {v1}, Ld/d/a/z5;->K1(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 5
+    invoke-virtual {v0}, Lk/b/f/d;->d()Landroid/view/Menu;
+
+    move-result-object p1
+
+    const v1, 0x7f130c5e
+
+    invoke-static {v1}, Ld/d/a/z5;->K1(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 6
+    new-instance p1, Ld/o/t/g/b/v;
+
+    invoke-direct {p1, p0}, Ld/o/t/g/b/v;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)V
+
+    invoke-virtual {v0, p1}, Lk/b/f/d;->i(Lk/b/f/d$c;)V
+
+    .line 7
+    invoke-virtual {v0}, Lk/b/f/d;->j()V
+
+    return-void
+.end method
+
+.method public static synthetic h(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Ljava/util/List;
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->x(Ls8/a;Ljava/lang/String;)Landroid/util/Pair;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Ld/o/t/g/b/c0$f;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->k0:Ld/o/t/g/b/c0$f;
+
+    return-object p0
+.end method
+
+.method public static synthetic j(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;Landroid/view/View;I)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->F(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public static synthetic k(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/app/Activity;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
+
+    return-object p0
+.end method
+
+.method public static synthetic l(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/widget/EditText;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
+
+    return-object p0
+.end method
+
+.method public static synthetic m(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/widget/TextView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->w:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method private o(J)Ljava/lang/String;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "date"
+        }
+    .end annotation
+
+    const-string p0, "yyyy/MM/dd kk:mm"
+
+    .line 1
+    invoke-static {p0, p1, p2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic i(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;Landroid/view/MenuItem;)Z
-    .locals 0
+.method private p(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->z(Landroid/view/MenuItem;)Z
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
 
-    move-result p0
+    const/4 v0, 0x0
 
-    return p0
-.end method
+    if-nez p0, :cond_0
 
-.method public static synthetic j(Landroid/content/DialogInterface;I)V
-    .locals 0
+    return-object v0
 
-    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->v(Landroid/content/DialogInterface;I)V
+    .line 2
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public static synthetic k(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
+    .line 3
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->w(Ljava/lang/Object;)Ljava/lang/String;
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return-object v0
+
+    .line 4
+    :cond_1
+    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic l(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;ILandroid/util/Pair;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->y(ILandroid/util/Pair;)V
-
-    return-void
-.end method
-
-.method public static synthetic m(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Ljava/util/List;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public static synthetic n(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->h:Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
-
-    return-object p0
-.end method
-
-.method public static synthetic o(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;Landroid/view/View;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->H(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static synthetic p(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/app/Activity;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    return-object p0
-.end method
-
-.method public static synthetic q(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/widget/EditText;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    return-object p0
-.end method
-
-.method public static synthetic r(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)Landroid/widget/TextView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->g:Landroid/widget/TextView;
-
-    return-object p0
-.end method
-
-.method public static synthetic v(Landroid/content/DialogInterface;I)V
+.method public static synthetic q(Landroid/content/DialogInterface;I)V
     .locals 0
 
     const-string p0, "VPWorkspaceAdapter"
 
     const-string p1, "onClick NegativeButton"
 
+    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "workspace_rename_cancel"
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lk9/a;->a4(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->W3(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic w(Ljava/lang/Object;)Ljava/lang/String;
+.method private synthetic r(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -219,7 +650,8 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
 
     invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -236,7 +668,7 @@
     return-object p0
 .end method
 
-.method public static synthetic x(Ls8/a;Ljava/lang/String;)Landroid/util/Pair;
+.method public static synthetic t(Ld/d/a/k7/a;Ljava/lang/String;)Landroid/util/Pair;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -244,9 +676,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/Pair;
 
-    invoke-virtual {p0, p1}, Ls8/a;->a(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Ld/d/a/k7/a;->a(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -259,7 +692,7 @@
     return-object v0
 .end method
 
-.method private synthetic y(ILandroid/util/Pair;)V
+.method private synthetic u(ILandroid/util/Pair;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -267,12 +700,14 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Boolean;
@@ -283,39 +718,45 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object p2, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/String;
 
-    invoke-virtual {p0, p2, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->F(Ljava/lang/String;I)V
+    invoke-direct {p0, p2, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->D(Ljava/lang/String;I)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
-    const p2, 0x7f1403b5
+    const p2, 0x7f13039f
 
-    invoke-static {p1, p2}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p1, p2}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
+    .line 5
     :goto_0
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    .line 6
+    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_1
     const-string p0, "workspace_rename_confirm"
 
-    invoke-static {p0, v1}, Lk9/a;->a4(Ljava/lang/String;Ljava/lang/String;)V
+    .line 7
+    invoke-static {p0, v1}, Ld/d/a/v7/f;->W3(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic z(Landroid/view/MenuItem;)Z
+.method private synthetic w(Landroid/view/MenuItem;)Z
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Landroid/view/MenuItem;->getGroupId()I
 
     move-result v0
@@ -324,18 +765,27 @@
 
     move-result p1
 
-    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->B(II)V
+    invoke-direct {p0, v0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->z(II)V
 
     const/4 p0, 0x1
 
     return p0
 .end method
 
-
-# virtual methods
-.method public final A(Ljava/lang/String;Landroid/widget/ImageView;)Z
+.method private y(Ljava/lang/String;Landroid/widget/ImageView;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "thumbPath",
+            "imageView"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -346,11 +796,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -369,34 +821,41 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 5
     instance-of v1, v0, Lio/reactivex/disposables/Disposable;
 
     if-eqz v1, :cond_2
 
+    .line 6
     check-cast v0, Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    .line 7
+    invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     :cond_2
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
     invoke-static {p0}, Lcom/bumptech/glide/Glide;->with(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0, p2}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     const/4 p0, 0x1
@@ -408,9 +867,20 @@
     return v1
 .end method
 
-.method public final B(II)V
+.method private z(II)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,48 +928,66 @@
     :cond_0
     const-string p2, "workspace_delete"
 
-    invoke-static {p2, v1}, Lk9/a;->a4(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {p2, v1}, Ld/d/a/v7/f;->W3(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->h:Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
+    .line 3
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->k0:Ld/o/t/g/b/c0$f;
 
-    invoke-interface {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/a$f;->q0(I)V
+    invoke-interface {p0, p1}, Ld/o/t/g/b/c0$f;->Y(I)V
 
     goto :goto_0
 
     :cond_1
     const-string p2, "workspace_rename"
 
-    invoke-static {p2, v1}, Lk9/a;->a4(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {p2, v1}, Ld/d/a/v7/f;->W3(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->G(I)V
+    .line 5
+    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->E(I)V
 
     goto :goto_0
 
+    .line 6
     :cond_2
-    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->h:Lcom/xiaomi/microfilm/vlogpro/vp/a$f;
+    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->k0:Ld/o/t/g/b/c0$f;
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/xiaomi/microfilm/vlogpro/vp/b;
+    check-cast p0, Ld/o/t/g/b/j0;
 
-    invoke-interface {p2, p0}, Lcom/xiaomi/microfilm/vlogpro/vp/a$f;->M0(Lcom/xiaomi/microfilm/vlogpro/vp/b;)V
+    invoke-interface {p2, p0}, Ld/o/t/g/b/c0$f;->K0(Ld/o/t/g/b/j0;)V
 
     :goto_0
     return-void
 .end method
 
-.method public C(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;I)V
+
+# virtual methods
+.method public A(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;I)V
     .locals 2
     .param p1    # Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
-    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->a:Landroid/view/View;
+    .line 1
+    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->c:Landroid/view/View;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -507,60 +995,70 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->e:Landroid/widget/LinearLayout;
+    .line 2
+    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->j:Landroid/widget/LinearLayout;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/xiaomi/microfilm/vlogpro/vp/b;
+    check-cast p2, Ld/o/t/g/b/j0;
 
-    invoke-virtual {p2}, Lcom/xiaomi/microfilm/vlogpro/vp/b;->n()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->c:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->A(Ljava/lang/String;Landroid/widget/ImageView;)Z
-
-    invoke-virtual {p2}, Lcom/xiaomi/microfilm/vlogpro/vp/b;->v()Ljava/lang/String;
+    .line 4
+    invoke-virtual {p2}, Ld/o/t/g/b/j0;->m()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->f:Landroid/widget/TextView;
+    .line 5
+    iget-object v1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->f:Landroid/widget/ImageView;
+
+    invoke-direct {p0, v0, v1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->y(Ljava/lang/String;Landroid/widget/ImageView;)Z
+
+    .line 6
+    invoke-virtual {p2}, Ld/o/t/g/b/j0;->u()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 7
+    iget-object v1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->m:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    .line 8
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {v0}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->f:Landroid/widget/TextView;
+    .line 9
+    iget-object v0, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->m:Landroid/widget/TextView;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
+    .line 10
     :cond_0
-    invoke-virtual {p2}, Lcom/xiaomi/microfilm/vlogpro/vp/b;->m()J
+    invoke-virtual {p2}, Ld/o/t/g/b/j0;->l()J
 
     move-result-wide v0
 
-    iget-object p1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->g:Landroid/widget/TextView;
+    .line 11
+    iget-object p1, p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;->n:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->t(J)Ljava/lang/String;
+    invoke-direct {p0, v0, v1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->o(J)Ljava/lang/String;
 
     move-result-object p0
 
@@ -569,7 +1067,7 @@
     return-void
 .end method
 
-.method public D(Landroid/view/ViewGroup;I)Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
+.method public B(Landroid/view/ViewGroup;I)Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
     .locals 2
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -578,20 +1076,34 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p2
 
-    const v0, 0x7f0e0158
+    const v0, 0x7f0e0149
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
+    .line 3
     new-instance p2, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
 
     invoke-direct {p2, p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;Landroid/view/View;)V
@@ -599,12 +1111,13 @@
     return-object p2
 .end method
 
-.method public E()V
+.method public C()V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->e:Lio/reactivex/disposables/Disposable;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->t:Lio/reactivex/disposables/Disposable;
 
     const/4 v1, 0x0
 
@@ -616,27 +1129,34 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->e:Lio/reactivex/disposables/Disposable;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->t:Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->e:Lio/reactivex/disposables/Disposable;
+    .line 3
+    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->t:Lio/reactivex/disposables/Disposable;
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+    .line 5
+    invoke-virtual {v0, p0}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
+    .line 7
+    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u:Landroid/widget/EditText;
 
+    .line 8
     :cond_1
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_2
 
@@ -646,7 +1166,8 @@
 
     if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    .line 9
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
@@ -654,328 +1175,36 @@
     return-void
 .end method
 
-.method public final F(Ljava/lang/String;I)V
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/xiaomi/microfilm/vlogpro/vp/b;
-
-    invoke-virtual {v0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/b;->d(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final G(I)V
-    .locals 7
-
-    new-instance v0, Lmiuix/appcompat/app/AlertDialog$a;
-
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$a;-><init>(Landroid/content/Context;)V
-
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v2, 0x7f0e005f
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    const v2, 0x7f0b082e
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->g:Landroid/widget/TextView;
-
-    const v2, 0x7f0b082d
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/EditText;
-
-    iput-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;
-
-    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    invoke-virtual {v3}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0c0067
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v3
-
-    invoke-direct {v2, v3}, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;-><init>(I)V
-
-    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    const/4 v4, 0x1
-
-    new-array v5, v4, [Landroid/text/InputFilter;
-
-    const/4 v6, 0x0
-
-    aput-object v2, v5, v6
-
-    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
-
-    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-virtual {v2, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-virtual {v2, p0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setFocusable(Z)V
-
-    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setFocusableInTouchMode(Z)V
-
-    iget-object v2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f140ce5
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/app/AlertDialog$a;->Y(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lmiuix/appcompat/app/AlertDialog$a;->b0(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    move-result-object v1
-
-    const v2, 0x7f1403ed
-
-    invoke-static {v2}, Lcom/android/camera/a6;->T1(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lph/a0;
-
-    invoke-direct {v3}, Lph/a0;-><init>()V
-
-    invoke-virtual {v1, v2, v3}, Lmiuix/appcompat/app/AlertDialog$a;->E(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    new-instance v1, Ls8/a;
-
-    invoke-direct {v1}, Ls8/a;-><init>()V
-
-    new-instance v2, Ls8/c;
-
-    iget-object v3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-direct {v2, v3}, Ls8/c;-><init>(Landroid/view/View;)V
-
-    new-instance v3, Ls8/b;
-
-    const v4, 0x7f1403f2
-
-    invoke-static {v4}, Lcom/android/camera/a6;->T1(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v0, v4}, Ls8/b;-><init>(Lmiuix/appcompat/app/AlertDialog$a;Ljava/lang/String;)V
-
-    invoke-static {v2, v3}, Lio/reactivex/Observable;->merge(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x1f4
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v3, v4, v5}, Lio/reactivex/Observable;->throttleFirst(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
-
-    move-result-object v2
-
-    new-instance v3, Lph/b0;
-
-    invoke-direct {v3, p0}, Lph/b0;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)V
-
-    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
-
-    move-result-object v2
-
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
-
-    move-result-object v2
-
-    new-instance v3, Lph/c0;
-
-    invoke-direct {v3, v1}, Lph/c0;-><init>(Ls8/a;)V
-
-    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
-
-    move-result-object v1
-
-    sget-object v2, Leg/i;->b:Lio/reactivex/Scheduler;
-
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
-
-    move-result-object v1
-
-    new-instance v2, Lph/d0;
-
-    invoke-direct {v2, p0, p1}, Lph/d0;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;I)V
-
-    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->e:Lio/reactivex/disposables/Disposable;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$a;->f()Lmiuix/appcompat/app/AlertDialog;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
-
-    new-instance v1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$a;
-
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$a;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;I)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
-
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
-
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->show()V
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
-
-    return-void
-.end method
-
-.method public final H(Landroid/view/View;I)V
-    .locals 3
-
-    const-string v0, "workspace_menu"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lk9/a;->a4(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lgp/k;
-
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
-
-    invoke-direct {v0, v1, p1}, Lgp/k;-><init>(Landroid/content/Context;Landroid/view/View;)V
-
-    invoke-virtual {v0}, Lgp/k;->e()Landroid/view/Menu;
-
-    move-result-object p1
-
-    const v1, 0x7f140ce3
-
-    invoke-static {v1}, Lcom/android/camera/a6;->T1(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    invoke-virtual {v0}, Lgp/k;->e()Landroid/view/Menu;
-
-    move-result-object p1
-
-    const v1, 0x7f140ce5
-
-    invoke-static {v1}, Lcom/android/camera/a6;->T1(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    invoke-virtual {v0}, Lgp/k;->e()Landroid/view/Menu;
-
-    move-result-object p1
-
-    const v1, 0x7f140ce4
-
-    invoke-static {v1}, Lcom/android/camera/a6;->T1(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-interface {p1, p2, v2, v2, v1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-
-    new-instance p1, Lph/z;
-
-    invoke-direct {p1, p0}, Lph/z;-><init>(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;)V
-
-    invoke-virtual {v0, p1}, Lgp/k;->l(Lgp/k$c;)V
-
-    invoke-virtual {v0}, Lgp/k;->o()V
-
-    return-void
-.end method
-
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "s"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "s",
+            "start",
+            "count",
+            "after"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -983,7 +1212,8 @@
 .method public getItemCount()I
     .locals 0
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -992,16 +1222,61 @@
     return p0
 .end method
 
+.method public n(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld/o/t/g/b/j0;
+
+    .line 2
+    invoke-virtual {v0}, Ld/o/t/g/b/j0;->y()V
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->n:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    return-void
+.end method
+
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
     .param p1    # Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     check-cast p1, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->C(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->A(Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;I)V
 
     return-void
 .end method
@@ -1015,7 +1290,19 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->D(Landroid/view/ViewGroup;I)Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->B(Landroid/view/ViewGroup;I)Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter$WorkspaceItemHolder;
 
     move-result-object p0
 
@@ -1024,10 +1311,21 @@
 
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "hasFocus"
+        }
+    .end annotation
 
     if-eqz p2, :cond_0
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz p1, :cond_0
 
@@ -1037,7 +1335,8 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->d:Lmiuix/appcompat/app/AlertDialog;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->s:Lmiuix/appcompat/app/AlertDialog;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -1053,7 +1352,22 @@
 
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "s",
+            "start",
+            "before",
+            "count"
+        }
+    .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1062,31 +1376,34 @@
 
     move-result-object p1
 
+    .line 2
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;->getWordCount(Ljava/lang/String;)I
 
     move-result p1
 
-    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->g:Landroid/widget/TextView;
+    .line 3
+    iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->w:Landroid/widget/TextView;
 
     const/4 p3, 0x2
 
     new-array p3, p3, [Ljava/lang/Object;
 
-    const/4 p4, 0x0
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
+    const/4 p4, 0x0
+
     aput-object p1, p3, p4
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->a:Landroid/app/Activity;
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->m:Landroid/app/Activity;
 
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
+    .line 4
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f0c0067
+    const p1, 0x7f0c0033
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1100,9 +1417,10 @@
 
     aput-object p0, p3, p1
 
-    const p0, 0x7f140cf1
+    const p0, 0x7f130c6c
 
-    invoke-static {p0, p3}, Lcom/android/camera/a6;->U1(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 5
+    invoke-static {p0, p3}, Ld/d/a/z5;->L1(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1111,74 +1429,30 @@
     return-void
 .end method
 
-.method public s(I)V
-    .locals 1
+.method public synthetic s(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->r(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    check-cast v0, Lcom/xiaomi/microfilm/vlogpro/vp/b;
+.method public synthetic v(ILandroid/util/Pair;)V
+    .locals 0
 
-    invoke-virtual {v0}, Lcom/xiaomi/microfilm/vlogpro/vp/b;->A()V
-
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->b:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->u(ILandroid/util/Pair;)V
 
     return-void
 .end method
 
-.method public final t(J)Ljava/lang/String;
+.method public synthetic x(Landroid/view/MenuItem;)Z
     .locals 0
 
-    const-string p0, "yyyy/MM/dd kk:mm"
+    invoke-direct {p0, p1}, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->w(Landroid/view/MenuItem;)Z
 
-    invoke-static {p0, p1, p2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    move-result p0
 
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final u(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceAdapter;->f:Landroid/widget/EditText;
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return-object v0
-
-    :cond_1
-    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method

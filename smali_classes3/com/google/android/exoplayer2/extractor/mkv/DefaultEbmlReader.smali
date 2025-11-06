@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;
+.class public final Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -60,20 +60,24 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->masterElementsStack:Ljava/util/ArrayDeque;
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;-><init>()V
@@ -97,8 +101,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
@@ -108,6 +114,7 @@
 
     invoke-interface {p1, v0, v1, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
     aget-byte v0, v0, v1
@@ -122,6 +129,7 @@
 
     if-gt v0, v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
     invoke-static {v2, v0, v1}, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->assembleVarint([BIZ)J
@@ -130,6 +138,7 @@
 
     long-to-int v1, v1
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->isLevel1Element(I)Z
@@ -138,6 +147,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 6
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     int-to-long p0, v1
@@ -147,6 +157,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 7
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     goto :goto_0
@@ -160,6 +171,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->readInteger(Lcom/google/android/exoplayer2/extractor/ExtractorInput;I)J
 
     move-result-wide p0
@@ -170,6 +182,7 @@
 
     long-to-int p0, p0
 
+    .line 2
     invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
 
     move-result p0
@@ -178,6 +191,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p0, p1}, Ljava/lang/Double;->longBitsToDouble(J)D
 
@@ -195,6 +209,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
     const/4 v1, 0x0
@@ -210,6 +225,7 @@
 
     shl-long/2addr v2, p1
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->scratch:[B
 
     aget-byte p1, p1, v1
@@ -242,11 +258,13 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-array v0, p1, [B
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-interface {p0, v0, v1, p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
     :goto_0
@@ -254,6 +272,7 @@
 
     add-int/lit8 p0, p1, -0x1
 
+    .line 3
     aget-byte p0, v0, p0
 
     if-nez p0, :cond_1
@@ -262,6 +281,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/String;
 
@@ -275,6 +295,7 @@
 .method public init(Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     return-void
@@ -288,10 +309,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->masterElementsStack:Ljava/util/ArrayDeque;
 
@@ -305,6 +328,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
@@ -317,6 +341,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->masterElementsStack:Ljava/util/ArrayDeque;
@@ -335,6 +360,7 @@
 
     return v1
 
+    .line 5
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
@@ -344,6 +370,7 @@
 
     if-nez v0, :cond_3
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->varintReader:Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
 
     invoke-virtual {v0, p1, v1, v3, v2}, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->readUnsignedVarint(Lcom/google/android/exoplayer2/extractor/ExtractorInput;ZZI)J
@@ -356,6 +383,7 @@
 
     if-nez v0, :cond_1
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->maybeResyncToNextLevel1Element(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)J
 
     move-result-wide v4
@@ -372,10 +400,13 @@
     :cond_2
     long-to-int v0, v4
 
+    .line 8
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementId:I
 
+    .line 9
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
+    .line 10
     :cond_3
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
@@ -383,6 +414,7 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->varintReader:Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
 
     const/16 v5, 0x8
@@ -393,8 +425,10 @@
 
     iput-wide v5, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
+    .line 12
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
+    .line 13
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
@@ -424,6 +458,7 @@
 
     if-ne v0, v2, :cond_7
 
+    .line 14
     iget-wide v8, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
     const-wide/16 v10, 0x4
@@ -438,6 +473,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_5
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -461,6 +497,7 @@
 
     throw p0
 
+    .line 16
     :cond_6
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
@@ -475,10 +512,12 @@
 
     invoke-interface {v0, v2, v4, v5}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->floatElement(ID)V
 
+    .line 17
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     return v1
 
+    .line 18
     :cond_7
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -500,6 +539,7 @@
 
     throw p0
 
+    .line 19
     :cond_8
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
@@ -511,10 +551,12 @@
 
     invoke-interface {v0, v2, v4, p1}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->binaryElement(IILcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 20
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     return v1
 
+    .line 21
     :cond_9
     iget-wide v6, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
@@ -524,6 +566,7 @@
 
     if-gtz v0, :cond_a
 
+    .line 22
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementId:I
@@ -536,10 +579,12 @@
 
     invoke-interface {v0, v2, p1}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->stringElement(ILjava/lang/String;)V
 
+    .line 23
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     return v1
 
+    .line 24
     :cond_a
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -563,6 +608,7 @@
 
     throw p0
 
+    .line 25
     :cond_b
     iget-wide v8, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
@@ -570,6 +616,7 @@
 
     if-gtz v0, :cond_c
 
+    .line 26
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementId:I
@@ -582,10 +629,12 @@
 
     invoke-interface {v0, v2, v4, v5}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->integerElement(IJ)V
 
+    .line 27
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     return v1
 
+    .line 28
     :cond_c
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -609,15 +658,18 @@
 
     throw p0
 
+    .line 29
     :cond_d
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v6
 
+    .line 30
     iget-wide v8, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
     add-long/2addr v8, v6
 
+    .line 31
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->masterElementsStack:Ljava/util/ArrayDeque;
 
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;
@@ -628,6 +680,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
+    .line 32
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->processor:Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;
 
     iget v5, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementId:I
@@ -636,10 +689,12 @@
 
     invoke-interface/range {v4 .. v9}, Lcom/google/android/exoplayer2/extractor/mkv/EbmlProcessor;->startMasterElement(IJJ)V
 
+    .line 33
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     return v1
 
+    .line 34
     :cond_e
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementContentSize:J
 
@@ -647,6 +702,7 @@
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 35
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
     goto/16 :goto_0
@@ -657,12 +713,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->elementState:I
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->masterElementsStack:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader;->varintReader:Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->reset()V

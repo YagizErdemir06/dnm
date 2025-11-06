@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;
+.class public Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;
 .super Landroidx/constraintlayout/core/motion/utils/Easing;
 .source "SourceFile"
 
@@ -21,13 +21,13 @@
 
 
 # instance fields
-.field x1:D
+.field public x1:D
 
-.field x2:D
+.field public x2:D
 
-.field y1:D
+.field public y1:D
 
-.field y2:D
+.field public y2:D
 
 
 # direct methods
@@ -173,6 +173,7 @@
 
     mul-double/2addr v6, v2
 
+    .line 1
     iget-wide v8, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->x1:D
 
     mul-double/2addr v6, v8
@@ -217,6 +218,7 @@
 
     mul-double/2addr v6, v2
 
+    .line 1
     iget-wide v8, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->y1:D
 
     mul-double/2addr v6, v8
@@ -271,6 +273,7 @@
 
     mul-double/2addr v4, p1
 
+    .line 1
     iget-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->x1:D
 
     mul-double/2addr p1, v0
@@ -309,6 +312,7 @@
 
     mul-double/2addr v4, p1
 
+    .line 1
     iget-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->y1:D
 
     mul-double/2addr p1, v0
@@ -353,6 +357,7 @@
 
     move-wide v4, v2
 
+    .line 1
     :goto_0
     sget-wide v6, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->error:D
 
@@ -360,6 +365,7 @@
 
     if-lez v6, :cond_3
 
+    .line 2
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v6
@@ -382,20 +388,24 @@
     :cond_3
     sub-double v0, v4, v2
 
+    .line 3
     invoke-direct {p0, v0, v1}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v6
 
     add-double/2addr v4, v2
 
+    .line 4
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v2
 
+    .line 5
     invoke-direct {p0, v0, v1}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getY(D)D
 
     move-result-wide v0
 
+    .line 6
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getY(D)D
 
     move-result-wide v4
@@ -424,6 +434,7 @@
 
     move-wide v4, v2
 
+    .line 1
     :goto_0
     sget-wide v6, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->d_error:D
 
@@ -431,6 +442,7 @@
 
     if-lez v6, :cond_1
 
+    .line 2
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v6
@@ -453,20 +465,24 @@
     :cond_1
     sub-double p1, v4, v2
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v0
 
     add-double/2addr v4, v2
 
+    .line 4
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getX(D)D
 
     move-result-wide v2
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getY(D)D
 
     move-result-wide p1
 
+    .line 6
     invoke-direct {p0, v4, v5}, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->getY(D)D
 
     move-result-wide v4
@@ -483,12 +499,16 @@
 .method public setup(DDDD)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->x1:D
 
+    .line 2
     iput-wide p3, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->y1:D
 
+    .line 3
     iput-wide p5, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->x2:D
 
+    .line 4
     iput-wide p7, p0, Landroidx/constraintlayout/core/motion/utils/Easing$CubicEasing;->y2:D
 
     return-void

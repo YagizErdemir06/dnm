@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field private final a:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field public b:Ljava/lang/ref/WeakReference;
+.field private b:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -48,8 +48,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -72,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -98,11 +101,12 @@
 
     const-string v0, "MediaBrowserCompat"
 
+    .line 1
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$b;->b:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -110,7 +114,8 @@
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$b;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 2
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -118,24 +123,28 @@
 
     goto/16 :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
+    .line 4
     invoke-static {v1}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
+    .line 5
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$b;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/support/v4/media/MediaBrowserCompat$k;
 
+    .line 6
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$b;->b:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -143,6 +152,7 @@
 
     const/4 v9, 0x1
 
+    .line 7
     :try_start_0
     iget v3, p1, Landroid/os/Message;->what:I
     :try_end_0
@@ -160,6 +170,7 @@
 
     if-eq v3, v5, :cond_1
 
+    .line 8
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -196,26 +207,32 @@
     :cond_1
     const-string v3, "data_options"
 
+    .line 9
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v7
 
+    .line 10
     invoke-static {v7}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
     const-string v3, "data_notify_children_changed_options"
 
+    .line 11
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v8
 
+    .line 12
     invoke-static {v8}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
+    .line 13
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v3, "data_media_item_list"
 
+    .line 14
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v6
@@ -224,10 +241,12 @@
 
     move-object v4, p0
 
+    .line 15
     invoke-interface/range {v3 .. v8}, Landroid/support/v4/media/MediaBrowserCompat$k;->j(Landroid/os/Messenger;Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;Landroid/os/Bundle;)V
 
     goto :goto_0
 
+    .line 16
     :cond_2
     invoke-interface {v2, p0}, Landroid/support/v4/media/MediaBrowserCompat$k;->i(Landroid/os/Messenger;)V
 
@@ -236,24 +255,29 @@
     :cond_3
     const-string v3, "data_root_hints"
 
+    .line 17
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v3
 
+    .line 18
     invoke-static {v3}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
+    .line 19
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "data_media_session_token"
 
+    .line 20
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
 
     check-cast v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
+    .line 21
     invoke-interface {v2, p0, v4, v1, v3}, Landroid/support/v4/media/MediaBrowserCompat$k;->m(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V
     :try_end_1
     .catch Landroid/os/BadParcelableException; {:try_start_1 .. :try_end_1} :catch_0
@@ -263,12 +287,15 @@
     :catch_0
     const-string v1, "Could not unparcel the data."
 
+    .line 22
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 23
     iget p1, p1, Landroid/os/Message;->what:I
 
     if-ne p1, v9, :cond_4
 
+    .line 24
     invoke-interface {v2, p0}, Landroid/support/v4/media/MediaBrowserCompat$k;->i(Landroid/os/Messenger;)V
 
     :cond_4

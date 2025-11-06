@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static TAG:Ljava/lang/String; = "com.xiaomi.milab.videosdk.XmsTextureView"
+.field private static TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -24,7 +24,16 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/xiaomi/milab/videosdk/XmsTextureView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -146,6 +155,7 @@
 .method public getSurface()Landroid/view/Surface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->mSurface:Landroid/view/Surface;
 
     return-object p0
@@ -154,6 +164,7 @@
 .method public isCreated()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->isCreated:Z
 
     return p0
@@ -174,6 +185,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -200,22 +212,28 @@
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->isCreated:Z
 
+    .line 3
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->mSurface:Landroid/view/Surface;
 
+    .line 4
     iput p2, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->width:I
 
+    .line 5
     iput p3, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->height:I
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->surfaceCreatedLister:Lcom/xiaomi/milab/videosdk/interfaces/SurfaceCreatedCallback;
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/SurfaceCreatedCallback;->SurfaceCreated()V
 
     :cond_0
@@ -253,6 +271,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object p1, Lcom/xiaomi/milab/videosdk/XmsTextureView;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -277,8 +296,10 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->width:I
 
+    .line 3
     iput p3, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->height:I
 
     return-void
@@ -309,6 +330,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->surfaceCreatedLister:Lcom/xiaomi/milab/videosdk/interfaces/SurfaceCreatedCallback;
 
     return-void
@@ -325,6 +347,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsTextureView;->mSurface:Landroid/view/Surface;
 
     return-void

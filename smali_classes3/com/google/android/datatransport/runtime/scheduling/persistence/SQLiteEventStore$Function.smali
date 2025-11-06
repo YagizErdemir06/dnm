@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;
+.class public interface abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

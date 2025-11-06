@@ -1,11 +1,11 @@
 .class public Lcom/airbnb/lottie/LottieAnimationView$d;
-.super Lv/j;
+.super Ld/b/a/b0/j;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieAnimationView;->addValueCallback(Ln/e;Ljava/lang/Object;Lv/l;)V
+    value = Lcom/airbnb/lottie/LottieAnimationView;->addValueCallback(Ld/b/a/x/e;Ljava/lang/Object;Ld/b/a/b0/l;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,46 +15,48 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lv/j<",
+        "Ld/b/a/b0/j<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic d:Lv/l;
+.field public final synthetic d:Ld/b/a/b0/l;
 
 .field public final synthetic e:Lcom/airbnb/lottie/LottieAnimationView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Lv/l;)V
+.method public constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Ld/b/a/b0/l;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$d;->e:Lcom/airbnb/lottie/LottieAnimationView;
 
-    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$d;->d:Lv/l;
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$d;->d:Ld/b/a/b0/l;
 
-    invoke-direct {p0}, Lv/j;-><init>()V
+    invoke-direct {p0}, Ld/b/a/b0/j;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lv/b;)Ljava/lang/Object;
+.method public a(Ld/b/a/b0/b;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lv/b<",
+            "Ld/b/a/b0/b<",
             "TT;>;)TT;"
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$d;->d:Lv/l;
+    .line 1
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$d;->d:Ld/b/a/b0/l;
 
-    invoke-interface {p0, p1}, Lv/l;->a(Lv/b;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Ld/b/a/b0/l;->a(Ld/b/a/b0/b;)Ljava/lang/Object;
 
     move-result-object p0
 

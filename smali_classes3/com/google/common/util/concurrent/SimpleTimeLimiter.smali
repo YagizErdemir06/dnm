@@ -25,8 +25,10 @@
 .method private constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -46,6 +48,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->throwCause(Ljava/lang/Exception;Z)Ljava/lang/Exception;
 
     move-result-object p0
@@ -61,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->callWithTimeout(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;Z)Ljava/lang/Object;
 
     move-result-object p0
@@ -184,6 +188,7 @@
     :goto_0
     const-string v1, "timeout must be positive: %s"
 
+    .line 1
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
     return-void
@@ -192,6 +197,7 @@
 .method public static create(Ljava/util/concurrent/ExecutorService;)Lcom/google/common/util/concurrent/SimpleTimeLimiter;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/SimpleTimeLimiter;
 
     invoke-direct {v0, p0}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;-><init>(Ljava/util/concurrent/ExecutorService;)V
@@ -202,6 +208,7 @@
 .method private static declaresInterruptedEx(Ljava/lang/reflect/Method;)Z
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/reflect/Method;->getExceptionTypes()[Ljava/lang/Class;
 
     move-result-object p0
@@ -217,6 +224,7 @@
 
     aget-object v3, p0, v2
 
+    .line 2
     const-class v4, Ljava/lang/InterruptedException;
 
     if-ne v3, v4, :cond_0
@@ -247,10 +255,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -264,12 +274,14 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->declaresInterruptedEx(Ljava/lang/reflect/Method;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 4
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -329,7 +341,8 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -337,11 +350,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v1
 
@@ -353,29 +367,36 @@
 
     check-cast p1, [Ljava/lang/StackTraceElement;
 
+    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
+    .line 4
     :cond_0
     instance-of p1, v0, Ljava/lang/Exception;
 
     if-nez p1, :cond_2
 
+    .line 5
     instance-of p1, v0, Ljava/lang/Error;
 
     if-eqz p1, :cond_1
 
+    .line 6
     check-cast v0, Ljava/lang/Error;
 
     throw v0
 
+    .line 7
     :cond_1
     throw p0
 
+    .line 8
     :cond_2
     check-cast v0, Ljava/lang/Exception;
 
     throw v0
 
+    .line 9
     :cond_3
     throw p0
 .end method
@@ -388,20 +409,24 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Error;
 
     if-nez p0, :cond_1
 
+    .line 2
     instance-of p0, p1, Ljava/lang/RuntimeException;
 
     if-eqz p0, :cond_0
 
+    .line 3
     new-instance p0, Lcom/google/common/util/concurrent/UncheckedExecutionException;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/UncheckedExecutionException;-><init>(Ljava/lang/Throwable;)V
 
     throw p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/util/concurrent/ExecutionException;
 
@@ -409,6 +434,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     new-instance p0, Lcom/google/common/util/concurrent/ExecutionError;
 
@@ -422,10 +448,12 @@
 .method private wrapAndThrowRuntimeExecutionExceptionOrError(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Error;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance p0, Lcom/google/common/util/concurrent/ExecutionError;
 
     check-cast p1, Ljava/lang/Error;
@@ -434,6 +462,7 @@
 
     throw p0
 
+    .line 3
     :cond_0
     new-instance p0, Lcom/google/common/util/concurrent/UncheckedExecutionException;
 
@@ -468,18 +497,23 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p4}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2, p3}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->checkPositiveTimeout(J)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->executor:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
+    .line 5
     :try_start_0
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/util/concurrent/Uninterruptibles;->getUninterruptibly(Ljava/util/concurrent/Future;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
@@ -493,12 +527,14 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 6
+    invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->wrapAndThrowExecutionExceptionOrError(Ljava/lang/Throwable;)V
 
+    .line 7
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -510,8 +546,10 @@
 
     const/4 p2, 0x1
 
+    .line 8
     invoke-interface {p1, p2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 9
     throw p0
 .end method
 
@@ -572,7 +610,7 @@
     move-exception p1
 
     .line 17
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
@@ -668,18 +706,23 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p4}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2, p3}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->checkPositiveTimeout(J)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->executor:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
+    .line 5
     :try_start_0
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/util/concurrent/Uninterruptibles;->getUninterruptibly(Ljava/util/concurrent/Future;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     :try_end_0
@@ -691,12 +734,14 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 6
+    invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->wrapAndThrowRuntimeExecutionExceptionOrError(Ljava/lang/Throwable;)V
 
+    .line 7
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -708,8 +753,10 @@
 
     const/4 p2, 0x1
 
+    .line 8
     invoke-interface {p1, p2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 9
     throw p0
 .end method
 
@@ -722,18 +769,23 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p4}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2, p3}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->checkPositiveTimeout(J)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->executor:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
+    .line 5
     :try_start_0
     invoke-interface {p1, p2, p3, p4}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     :try_end_0
@@ -746,12 +798,14 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 6
+    invoke-virtual {p1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->wrapAndThrowRuntimeExecutionExceptionOrError(Ljava/lang/Throwable;)V
 
+    .line 7
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -763,7 +817,9 @@
 
     const/4 p2, 0x1
 
+    .line 8
     invoke-interface {p1, p2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 9
     throw p0
 .end method

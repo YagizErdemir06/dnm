@@ -63,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/data/AbstractDataBuffer;-><init>(Lcom/google/android/gms/common/data/DataHolder;)V
 
     iput-object p2, p0, Lcom/google/android/gms/common/data/DataBufferSafeParcelable;->zab:Landroid/os/Parcelable$Creator;
@@ -93,18 +94,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-interface {p1, v0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
     new-instance p1, Landroid/content/ContentValues;
 
+    .line 3
     invoke-direct {p1}, Landroid/content/ContentValues;-><init>()V
 
+    .line 4
     invoke-virtual {v0}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v1
@@ -113,8 +118,10 @@
 
     invoke-virtual {p1, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/data/DataHolder$Builder;->withRow(Landroid/content/ContentValues;)Lcom/google/android/gms/common/data/DataHolder$Builder;
 
+    .line 6
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -128,6 +135,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/data/DataBufferSafeParcelable;->zaa:[Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/gms/common/data/DataHolder;->builder([Ljava/lang/String;)Lcom/google/android/gms/common/data/DataHolder$Builder;

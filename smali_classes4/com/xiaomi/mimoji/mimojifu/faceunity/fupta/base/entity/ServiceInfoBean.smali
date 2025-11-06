@@ -38,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +49,7 @@
 .method public getAge_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->age_label:I
 
     return p0
@@ -56,6 +58,7 @@
 .method public getBrow_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->brow_label:I
 
     return p0
@@ -64,6 +67,7 @@
 .method public getBrow_location()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->brow_location:I
 
     return p0
@@ -72,6 +76,7 @@
 .method public getDst_transfer_color()[D
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->dst_transfer_color:[D
 
     return-object p0
@@ -80,6 +85,7 @@
 .method public getEye_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->eye_label:I
 
     return p0
@@ -88,6 +94,7 @@
 .method public getFace_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->face_label:I
 
     return p0
@@ -96,6 +103,7 @@
 .method public getGender()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->gender:I
 
     return p0
@@ -104,6 +112,7 @@
 .method public getGlasses_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->glasses_label:I
 
     return p0
@@ -112,6 +121,7 @@
 .method public getHair_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->hair_label:I
 
     return p0
@@ -120,6 +130,7 @@
 .method public getMouth_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->mouth_label:I
 
     return p0
@@ -128,6 +139,7 @@
 .method public getNose_label()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->nose_label:I
 
     return p0
@@ -136,6 +148,7 @@
 .method public getPupil_index()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->pupil_index:I
 
     return p0
@@ -143,7 +156,16 @@
 
 .method public setAge_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "age_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->age_label:I
 
     return-void
@@ -151,7 +173,16 @@
 
 .method public setBrow_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brow_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->brow_label:I
 
     return-void
@@ -159,7 +190,16 @@
 
 .method public setBrow_location(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brow_location"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->brow_location:I
 
     return-void
@@ -167,7 +207,16 @@
 
 .method public setDst_transfer_color([D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dst_transfer_color"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->dst_transfer_color:[D
 
     return-void
@@ -175,7 +224,16 @@
 
 .method public setEye_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eye_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->eye_label:I
 
     return-void
@@ -183,7 +241,16 @@
 
 .method public setFace_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "face_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->face_label:I
 
     return-void
@@ -191,7 +258,16 @@
 
 .method public setGender(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gender"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->gender:I
 
     return-void
@@ -199,7 +275,16 @@
 
 .method public setGlasses_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "glasses_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->glasses_label:I
 
     return-void
@@ -207,7 +292,16 @@
 
 .method public setHair_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hair_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->hair_label:I
 
     return-void
@@ -215,7 +309,16 @@
 
 .method public setMouth_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mouth_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->mouth_label:I
 
     return-void
@@ -223,7 +326,16 @@
 
 .method public setNose_label(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nose_label"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->nose_label:I
 
     return-void
@@ -231,7 +343,16 @@
 
 .method public setPupil_index(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pupil_index"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->pupil_index:I
 
     return-void
@@ -240,6 +361,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -330,6 +452,7 @@
 
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->dst_transfer_color:[D
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->toString([D)Ljava/lang/String;
 
     move-result-object p0

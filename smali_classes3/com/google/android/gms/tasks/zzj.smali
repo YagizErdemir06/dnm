@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzj;
+.class public final Lcom/google/android/gms/tasks/zzj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -69,6 +69,7 @@
 .method public final zzc()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzj;->zzb:Ljava/lang/Object;
 
     monitor-enter v0
@@ -99,6 +100,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzj;->zzb:Ljava/lang/Object;
 
     monitor-enter v0
@@ -112,6 +114,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -123,6 +126,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/google/android/gms/tasks/zzi;-><init>(Lcom/google/android/gms/tasks/zzj;Lcom/google/android/gms/tasks/Task;)V
 
+    .line 3
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -130,6 +134,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     :try_start_1
     monitor-exit v0
     :try_end_1

@@ -9,6 +9,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/mlkit_common/zzal;-><init>(I)V
 
     return-void
@@ -19,8 +20,10 @@
 .method public final zzb(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzao;
     .locals 4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zzb:I
 
     add-int/lit8 v0, v0, 0x1
@@ -33,6 +36,7 @@
 
     if-ge v2, v0, :cond_0
 
+    .line 3
     invoke-static {v2, v0}, Lcom/google/android/gms/internal/mlkit_common/zzam;->zza(II)I
 
     move-result v0
@@ -47,11 +51,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zzc:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v1}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -62,6 +68,7 @@
 
     iput-boolean v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zzc:Z
 
+    .line 6
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zza:[Ljava/lang/Object;
@@ -72,6 +79,7 @@
 
     iput v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zzb:I
 
+    .line 7
     aput-object p1, v0, v1
 
     return-object p0
@@ -82,6 +90,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zzc:Z
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzal;->zza:[Ljava/lang/Object;

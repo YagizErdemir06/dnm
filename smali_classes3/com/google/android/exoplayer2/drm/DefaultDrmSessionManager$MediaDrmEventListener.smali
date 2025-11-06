@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$MediaDrmEventListener;
+.class public Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$MediaDrmEventListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager;
 
 
 # direct methods
@@ -55,6 +55,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$MediaDrmEventListener;->this$0:Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager;->mediaDrmHandler:Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$MediaDrmHandler;

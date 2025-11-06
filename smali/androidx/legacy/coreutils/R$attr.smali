@@ -15,29 +15,29 @@
 
 
 # static fields
-.field public static final alpha:I = 0x7f040088
+.field public static final alpha:I = 0x7f040077
 
-.field public static final font:I = 0x7f04031f
+.field public static final font:I = 0x7f0401dc
 
-.field public static final fontProviderAuthority:I = 0x7f040321
+.field public static final fontProviderAuthority:I = 0x7f0401de
 
-.field public static final fontProviderCerts:I = 0x7f040322
+.field public static final fontProviderCerts:I = 0x7f0401df
 
-.field public static final fontProviderFetchStrategy:I = 0x7f040323
+.field public static final fontProviderFetchStrategy:I = 0x7f0401e0
 
-.field public static final fontProviderFetchTimeout:I = 0x7f040324
+.field public static final fontProviderFetchTimeout:I = 0x7f0401e1
 
-.field public static final fontProviderPackage:I = 0x7f040325
+.field public static final fontProviderPackage:I = 0x7f0401e2
 
-.field public static final fontProviderQuery:I = 0x7f040326
+.field public static final fontProviderQuery:I = 0x7f0401e3
 
-.field public static final fontStyle:I = 0x7f040328
+.field public static final fontStyle:I = 0x7f0401e5
 
-.field public static final fontVariationSettings:I = 0x7f040329
+.field public static final fontVariationSettings:I = 0x7f0401e6
 
-.field public static final fontWeight:I = 0x7f04032a
+.field public static final fontWeight:I = 0x7f0401e7
 
-.field public static final ttcIndex:I = 0x7f040794
+.field public static final ttcIndex:I = 0x7f04048f
 
 
 # direct methods

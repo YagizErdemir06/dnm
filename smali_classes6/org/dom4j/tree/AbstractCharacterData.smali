@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractNode;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
 .method public appendText(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -44,6 +46,7 @@
 .method public getPath(Lorg/dom4j/Element;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -52,6 +55,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -82,6 +86,7 @@
 .method public getUniquePath(Lorg/dom4j/Element;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -90,6 +95,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

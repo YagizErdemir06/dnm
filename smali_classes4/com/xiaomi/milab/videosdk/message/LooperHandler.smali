@@ -34,18 +34,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "LooperHandler"
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->TAG:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;
 
     invoke-direct {v0, p0, p1}, Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;-><init>(Lcom/xiaomi/milab/videosdk/message/LooperHandler;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->mInnerHandler:Landroid/os/Handler;
 
+    .line 4
     new-instance p1, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-direct {p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;-><init>()V
@@ -58,6 +62,7 @@
 .method public static synthetic access$000(Lcom/xiaomi/milab/videosdk/message/LooperHandler;)Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     return-object p0
@@ -82,12 +87,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->mInnerHandler:Landroid/os/Handler;
 
     invoke-static {p0, p1, p2, p3, p4}, Landroid/os/Message;->obtain(Landroid/os/Handler;IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -96,6 +103,7 @@
 .method public onUnregister()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->mInnerHandler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -116,6 +124,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setAudioExtractCallback(Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;)V
@@ -134,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setExportCallback(Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;)V
@@ -152,6 +162,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setPlayCallback(Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;)V
@@ -170,6 +181,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setPreviewExportCallback(Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;)V
@@ -188,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setTimelineCallback(Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;)V
@@ -206,6 +219,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setTranscodeCallback(Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;)V

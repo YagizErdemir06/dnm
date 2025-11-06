@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/zzf;->zza:Ljava/util/concurrent/Callable;
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/zzf;->zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
@@ -42,6 +43,7 @@
     .catch Lcom/google/mlkit/common/MlKitException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
 
     return-void
@@ -49,13 +51,15 @@
     :catch_0
     move-exception v0
 
+    .line 3
     new-instance v1, Lcom/google/mlkit/common/MlKitException;
 
-    const-string v2, "Internal error has occurred when executing ML Kit tasks"
+    const/16 v2, 0xd
 
-    const/16 v3, 0xd
+    const-string v3, "Internal error has occurred when executing ML Kit tasks"
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
+    .line 4
+    invoke-direct {v1, v3, v2, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
     invoke-virtual {p0, v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
@@ -64,6 +68,7 @@
     :catch_1
     move-exception v0
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     return-void

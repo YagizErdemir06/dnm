@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
 
 .field private final zzb:Ljava/lang/Comparable;
 
@@ -46,6 +46,7 @@
 
     return p0
 
+    .line 1
     :cond_1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -60,12 +61,14 @@
 .method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zzb:Ljava/lang/Comparable;
 
     iget-object p1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zzb:Ljava/lang/Comparable;
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result p0
@@ -82,6 +85,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Ljava/util/Map$Entry;
 
@@ -91,11 +95,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Ljava/util/Map$Entry;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zzb:Ljava/lang/Comparable;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -143,6 +149,7 @@
 .method public final hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zzb:Ljava/lang/Comparable;
 
     const/4 v1, 0x0
@@ -179,6 +186,7 @@
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;->zzi(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;)V
@@ -193,6 +201,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgo;->zzb:Ljava/lang/Comparable;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

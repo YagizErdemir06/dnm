@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/StandardNetwork;
+.class public Lcom/google/common/graph/StandardNetwork;
 .super Lcom/google/common/graph/AbstractNetwork;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field final edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;
+.field public final edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/graph/MapIteratorCache<",
@@ -45,7 +45,7 @@
 
 .field private final isDirected:Z
 
-.field final nodeConnections:Lcom/google/common/graph/MapIteratorCache;
+.field public final nodeConnections:Lcom/google/common/graph/MapIteratorCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/graph/MapIteratorCache<",
@@ -230,6 +230,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object p0
@@ -244,6 +245,7 @@
 .method public allowsParallelEdges()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/graph/StandardNetwork;->allowsParallelEdges:Z
 
     return p0
@@ -252,6 +254,7 @@
 .method public allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/graph/StandardNetwork;->allowsSelfLoops:Z
 
     return p0
@@ -267,6 +270,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -279,9 +283,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const/4 v0, 0x1
@@ -311,6 +317,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -321,9 +328,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const/4 v0, 0x1
@@ -353,6 +362,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->containsKey(Ljava/lang/Object;)Z
@@ -370,6 +380,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->containsKey(Ljava/lang/Object;)Z
@@ -389,6 +400,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->edgeOrder:Lcom/google/common/graph/ElementOrder;
 
     return-object p0
@@ -404,6 +416,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->edgeToReferenceNode:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->unmodifiableKeySet()Ljava/util/Set;
@@ -423,22 +436,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object v0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/common/graph/StandardNetwork;->allowsSelfLoops:Z
 
     if-nez v1, :cond_0
 
     if-ne p1, p2, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p2}, Lcom/google/common/graph/StandardNetwork;->containsNode(Ljava/lang/Object;)Z
 
@@ -448,6 +465,7 @@
 
     invoke-static {p0, p1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 5
     invoke-interface {v0, p2}, Lcom/google/common/graph/NetworkConnections;->edgesConnecting(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -465,6 +483,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object p0
@@ -486,6 +505,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object p0
@@ -507,10 +527,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedReferenceNode(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/graph/StandardNetwork;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {v1, v0}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -527,6 +549,7 @@
 
     move-result-object p1
 
+    .line 3
     invoke-static {p0, v0, p1}, Lcom/google/common/graph/EndpointPair;->of(Lcom/google/common/graph/Network;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object p0
@@ -537,6 +560,7 @@
 .method public isDirected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/graph/StandardNetwork;->isDirected:Z
 
     return p0
@@ -552,6 +576,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
     return-object p0
@@ -567,6 +592,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardNetwork;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->unmodifiableKeySet()Ljava/util/Set;
@@ -586,6 +612,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardNetwork;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object p0

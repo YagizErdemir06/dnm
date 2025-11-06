@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+.field public myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
 
 # direct methods
@@ -37,7 +37,7 @@
     const/16 p1, 0x8
 
     .line 2
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     const/16 p1, 0x8
 
     .line 5
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     return-void
 .end method
@@ -93,7 +93,7 @@
     const/16 p1, 0x8
 
     .line 8
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     return-void
 .end method
@@ -113,6 +113,7 @@
 
     const-string p1, " ################# init"
 
+    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -196,7 +197,7 @@
     .line 2
     new-instance v0, Landroidx/constraintlayout/widget/Constraints$LayoutParams;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -208,21 +209,25 @@
 .method public getConstraintSet()Landroidx/constraintlayout/widget/ConstraintSet;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/widget/Constraints;->myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-direct {v0}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/Constraints;->myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/Constraints;->myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/ConstraintSet;->clone(Landroidx/constraintlayout/widget/Constraints;)V
 
+    .line 4
     iget-object p0, p0, Landroidx/constraintlayout/widget/Constraints;->myConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
     return-object p0

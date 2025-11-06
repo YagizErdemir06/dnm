@@ -4,47 +4,59 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010!\n\u0002\u0008\u0010\u0008\u0000\u0018\u00002\u00020\u0001B_\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0005\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\t\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\t\u0012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\t\u0012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\r\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\u0008\u0008\u0002\u0010\u000f\u001a\u00020\t\u00a2\u0006\u0002\u0010\u0010R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0011\u0010\u0012R\u0017\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0014\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0015\u0010\u0016R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u0018R\u0011\u0010\n\u001a\u00020\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0019\u0010\u001aR\u0011\u0010\u000c\u001a\u00020\r\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001b\u0010\u001cR\u0011\u0010\u0008\u001a\u00020\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u001aR\u0011\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0004\u0010\u001eR\u0015\u0010\u000e\u001a\u0004\u0018\u00010\t\u00a2\u0006\n\n\u0002\u0010!\u001a\u0004\u0008\u001f\u0010 R\u0011\u0010\u000f\u001a\u00020\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\"\u0010\u001aR\u0011\u0010\u000b\u001a\u00020\t\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008#\u0010\u001a\u00a8\u0006$"
+        "\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0002\u0008\n\n\u0002\u0010\u000e\n\u0002\u0008\u000b\u0008\u0000\u0018\u00002\u00020\u0001Ba\u0012\u0006\u0010\u001c\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\u000e\u001a\u00020\r\u0012\u0008\u0008\u0002\u0010!\u001a\u00020 \u0012\u0008\u0008\u0002\u0010%\u001a\u00020\u0002\u0012\u0008\u0008\u0002\u0010\'\u001a\u00020\u0002\u0012\u0008\u0008\u0002\u0010\u001a\u001a\u00020\u0002\u0012\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0015\u0012\n\u0008\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u0002\u0012\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008)\u0010*R\u0019\u0010\u0003\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006R\u001f\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\u00080\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u0019\u0010\u000e\u001a\u00020\r8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u000f\u001a\u0004\u0008\u000e\u0010\u0010R\u001b\u0010\u0011\u001a\u0004\u0018\u00010\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0011\u0010\u0012\u001a\u0004\u0008\u0013\u0010\u0014R\u0019\u0010\u0016\u001a\u00020\u00158\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0016\u0010\u0017\u001a\u0004\u0008\u0018\u0010\u0019R\u0019\u0010\u001a\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001a\u0010\u0004\u001a\u0004\u0008\u001b\u0010\u0006R\u0019\u0010\u001c\u001a\u00020\u00088\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001c\u0010\u001d\u001a\u0004\u0008\u001e\u0010\u001fR\u0019\u0010!\u001a\u00020 8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008!\u0010\"\u001a\u0004\u0008#\u0010$R\u0019\u0010%\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008%\u0010\u0004\u001a\u0004\u0008&\u0010\u0006R\u0019\u0010\'\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\'\u0010\u0004\u001a\u0004\u0008(\u0010\u0006\u00a8\u0006+"
     }
     d2 = {
         "Lokio/internal/ZipEntry;",
         "",
-        "canonicalPath",
-        "Lokio/Path;",
-        "isDirectory",
         "",
-        "comment",
-        "",
-        "crc",
-        "",
-        "compressedSize",
-        "size",
-        "compressionMethod",
-        "",
-        "lastModifiedAtMillis",
         "offset",
-        "(Lokio/Path;ZLjava/lang/String;JJJILjava/lang/Long;J)V",
-        "getCanonicalPath",
-        "()Lokio/Path;",
-        "children",
+        "J",
+        "getOffset",
+        "()J",
         "",
+        "Lokio/Path;",
+        "children",
+        "Ljava/util/List;",
         "getChildren",
         "()Ljava/util/List;",
-        "getComment",
-        "()Ljava/lang/String;",
-        "getCompressedSize",
-        "()J",
-        "getCompressionMethod",
-        "()I",
-        "getCrc",
+        "",
+        "isDirectory",
+        "Z",
         "()Z",
+        "lastModifiedAtMillis",
+        "Ljava/lang/Long;",
         "getLastModifiedAtMillis",
         "()Ljava/lang/Long;",
-        "Ljava/lang/Long;",
-        "getOffset",
+        "",
+        "compressionMethod",
+        "I",
+        "getCompressionMethod",
+        "()I",
+        "size",
         "getSize",
+        "canonicalPath",
+        "Lokio/Path;",
+        "getCanonicalPath",
+        "()Lokio/Path;",
+        "",
+        "comment",
+        "Ljava/lang/String;",
+        "getComment",
+        "()Ljava/lang/String;",
+        "crc",
+        "getCrc",
+        "compressedSize",
+        "getCompressedSize",
+        "<init>",
+        "(Lokio/Path;ZLjava/lang/String;JJJILjava/lang/Long;J)V",
         "okio"
     }
     k = 0x1
@@ -53,13 +65,12 @@
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 
 # instance fields
 .field private final canonicalPath:Lokio/Path;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -72,12 +83,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final comment:Ljava/lang/String;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -90,7 +101,7 @@
 .field private final isDirectory:Z
 
 .field private final lastModifiedAtMillis:Ljava/lang/Long;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -103,25 +114,25 @@
 .method public constructor <init>(Lokio/Path;ZLjava/lang/String;JJJILjava/lang/Long;J)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p11    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
     const-string v0, "canonicalPath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "comment"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -163,7 +174,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lokio/Path;ZLjava/lang/String;JJJILjava/lang/Long;JILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lokio/Path;ZLjava/lang/String;JJJILjava/lang/Long;JILh/d3/x/w;)V
     .locals 13
 
     move/from16 v0, p14
@@ -294,9 +305,10 @@
 # virtual methods
 .method public final getCanonicalPath()Lokio/Path;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/internal/ZipEntry;->canonicalPath:Lokio/Path;
 
     return-object p0
@@ -313,9 +325,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/internal/ZipEntry;->children:Ljava/util/List;
 
     return-object p0
@@ -323,9 +336,10 @@
 
 .method public final getComment()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/internal/ZipEntry;->comment:Ljava/lang/String;
 
     return-object p0
@@ -334,6 +348,7 @@
 .method public final getCompressedSize()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lokio/internal/ZipEntry;->compressedSize:J
 
     return-wide v0
@@ -342,6 +357,7 @@
 .method public final getCompressionMethod()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lokio/internal/ZipEntry;->compressionMethod:I
 
     return p0
@@ -350,6 +366,7 @@
 .method public final getCrc()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lokio/internal/ZipEntry;->crc:J
 
     return-wide v0
@@ -357,9 +374,10 @@
 
 .method public final getLastModifiedAtMillis()Ljava/lang/Long;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/internal/ZipEntry;->lastModifiedAtMillis:Ljava/lang/Long;
 
     return-object p0
@@ -368,6 +386,7 @@
 .method public final getOffset()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lokio/internal/ZipEntry;->offset:J
 
     return-wide v0
@@ -376,6 +395,7 @@
 .method public final getSize()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lokio/internal/ZipEntry;->size:J
 
     return-wide v0
@@ -384,6 +404,7 @@
 .method public final isDirectory()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/internal/ZipEntry;->isDirectory:Z
 
     return p0

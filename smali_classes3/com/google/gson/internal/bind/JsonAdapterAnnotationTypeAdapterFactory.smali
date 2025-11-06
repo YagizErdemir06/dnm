@@ -14,8 +14,10 @@
 .method public constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 
     return-void
@@ -37,10 +39,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p3}, Lcom/google/gson/annotations/JsonAdapter;->value()Ljava/lang/Class;
 
     move-result-object p3
 
+    .line 2
     const-class v0, Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v0, p3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -49,6 +53,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p3}, Lcom/google/gson/reflect/TypeToken;->get(Ljava/lang/Class;)Lcom/google/gson/reflect/TypeToken;
 
     move-result-object p1
@@ -65,6 +70,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     const-class v0, Lcom/google/gson/TypeAdapterFactory;
 
@@ -74,6 +80,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p3}, Lcom/google/gson/reflect/TypeToken;->get(Ljava/lang/Class;)Lcom/google/gson/reflect/TypeToken;
 
     move-result-object p3
@@ -82,18 +89,21 @@
 
     move-result-object p0
 
+    .line 6
     invoke-interface {p0}, Lcom/google/gson/internal/ObjectConstructor;->construct()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/google/gson/TypeAdapterFactory;
 
+    .line 7
     invoke-interface {p0, p1, p2}, Lcom/google/gson/TypeAdapterFactory;->create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -121,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
@@ -139,6 +150,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;->constructorConstructor:Lcom/google/gson/internal/ConstructorConstructor;
 

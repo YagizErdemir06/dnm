@@ -1,4 +1,4 @@
-.class synthetic Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$1;
+.class public synthetic Lcom/bumptech/glide/load/engine/bitmap_recycle/SizeConfigStrategy$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$android$graphics$Bitmap$Config:[I
+.field public static final synthetic $SwitchMap$android$graphics$Bitmap$Config:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
@@ -35,7 +36,7 @@
     :try_start_0
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 
@@ -51,7 +52,7 @@
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 
@@ -67,7 +68,7 @@
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 
@@ -83,7 +84,7 @@
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 

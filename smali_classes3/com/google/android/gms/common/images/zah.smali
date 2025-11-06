@@ -20,6 +20,7 @@
 .method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 7
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result p0
@@ -34,6 +35,7 @@
 
     move v1, v2
 
+    .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -41,10 +43,12 @@
 
     if-ge v4, p0, :cond_4
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v4
 
+    .line 4
     invoke-static {v4}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v5
@@ -65,10 +69,12 @@
 
     if-eq v5, v6, :cond_0
 
+    .line 5
     invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -76,6 +82,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -86,6 +93,7 @@
     :cond_2
     sget-object v3, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 8
     invoke-static {p1, v4, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object v3
@@ -94,6 +102,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -101,9 +110,11 @@
 
     goto :goto_0
 
+    .line 10
     :cond_4
     invoke-static {p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
+    .line 11
     new-instance p0, Lcom/google/android/gms/common/images/WebImage;
 
     invoke-direct {p0, v0, v3, v1, v2}, Lcom/google/android/gms/common/images/WebImage;-><init>(ILandroid/net/Uri;II)V
@@ -114,6 +125,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/google/android/gms/common/images/WebImage;
 
     return-object p0

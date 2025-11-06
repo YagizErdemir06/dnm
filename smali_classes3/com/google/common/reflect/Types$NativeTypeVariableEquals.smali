@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/Types$NativeTypeVariableEquals;
+.class public final Lcom/google/common/reflect/Types$NativeTypeVariableEquals;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,15 +24,17 @@
 
 
 # static fields
-.field static final NATIVE_TYPE_VARIABLE_ONLY:Z
+.field public static final NATIVE_TYPE_VARIABLE_ONLY:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     const-class v0, Lcom/google/common/reflect/Types$NativeTypeVariableEquals;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
 
     move-result-object v1
@@ -41,14 +43,16 @@
 
     aget-object v1, v1, v2
 
-    const-string v3, "X"
-
     new-array v2, v2, [Ljava/lang/reflect/Type;
 
+    const-string v3, "X"
+
+    .line 3
     invoke-static {v0, v3, v2}, Lcom/google/common/reflect/Types;->newArtificialTypeVariable(Ljava/lang/reflect/GenericDeclaration;Ljava/lang/String;[Ljava/lang/reflect/Type;)Ljava/lang/reflect/TypeVariable;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -63,6 +67,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final mediaSegments:Ljava/util/List;
+.field public final mediaSegments:Ljava/util/List;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -74,10 +74,12 @@
 
     move-wide/from16 v15, p16
 
+    .line 1
     invoke-direct/range {v0 .. v16}, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;-><init>(Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;JJJJLjava/util/List;JJJ)V
 
     move-object/from16 v1, p13
 
+    .line 2
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
 
     return-void
@@ -88,6 +90,7 @@
 .method public getSegmentCount(J)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -102,6 +105,7 @@
 .method public getSegmentUrl(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;J)Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
     .locals 2
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;->mediaSegments:Ljava/util/List;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->startNumber:J

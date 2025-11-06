@@ -30,22 +30,28 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v0, 0x0
 
+    .line 3
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 4
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
 
+    .line 5
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->min:D
 
+    .line 6
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->max:D
 
     return-void
@@ -54,6 +60,7 @@
 .method public static calculateNewMeanNonFinite(DD)D
     .locals 1
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v0
@@ -62,6 +69,7 @@
 
     return-wide p2
 
+    .line 2
     :cond_0
     invoke-static {p2, p3}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
@@ -98,6 +106,7 @@
 
     move-wide/from16 v9, p9
 
+    .line 1
     iget-wide v11, v0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v13, 0x0
@@ -106,14 +115,19 @@
 
     if-nez v13, :cond_0
 
+    .line 2
     iput-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->count:J
 
+    .line 3
     iput-wide v3, v0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 4
     iput-wide v5, v0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
+    .line 5
     iput-wide v7, v0, Lcom/google/common/math/StatsAccumulator;->min:D
 
+    .line 6
     iput-wide v9, v0, Lcom/google/common/math/StatsAccumulator;->max:D
 
     goto :goto_1
@@ -121,8 +135,10 @@
     :cond_0
     add-long/2addr v11, v1
 
+    .line 7
     iput-wide v11, v0, Lcom/google/common/math/StatsAccumulator;->count:J
 
+    .line 8
     iget-wide v11, v0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
     invoke-static {v11, v12}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
@@ -137,6 +153,7 @@
 
     if-eqz v11, :cond_1
 
+    .line 9
     iget-wide v11, v0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
     sub-double v13, v3, v11
@@ -145,6 +162,7 @@
 
     mul-double v15, v13, v1
 
+    .line 10
     iget-wide v9, v0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     long-to-double v9, v9
@@ -155,6 +173,7 @@
 
     iput-wide v11, v0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 11
     iget-wide v9, v0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     sub-double/2addr v3, v11
@@ -171,6 +190,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iget-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
@@ -182,8 +202,10 @@
 
     const-wide/high16 v1, 0x7ff8000000000000L    # Double.NaN
 
+    .line 13
     iput-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
+    .line 14
     :goto_0
     iget-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->min:D
 
@@ -193,6 +215,7 @@
 
     iput-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->min:D
 
+    .line 15
     iget-wide v1, v0, Lcom/google/common/math/StatsAccumulator;->max:D
 
     move-wide/from16 v3, p9
@@ -212,6 +235,7 @@
 .method public add(D)V
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x0
@@ -224,20 +248,26 @@
 
     if-nez v2, :cond_0
 
+    .line 2
     iput-wide v5, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
+    .line 3
     iput-wide p1, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 4
     iput-wide p1, p0, Lcom/google/common/math/StatsAccumulator;->min:D
 
+    .line 5
     iput-wide p1, p0, Lcom/google/common/math/StatsAccumulator;->max:D
 
+    .line 6
     invoke-static {p1, p2}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
+    .line 7
     iput-wide v3, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     goto :goto_1
@@ -245,8 +275,10 @@
     :cond_0
     add-long/2addr v0, v5
 
+    .line 8
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
+    .line 9
     invoke-static {p1, p2}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v0
@@ -261,10 +293,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 10
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
     sub-double v2, p1, v0
 
+    .line 11
     iget-wide v4, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     long-to-double v4, v4
@@ -275,6 +309,7 @@
 
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 12
     iget-wide v4, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     sub-double v0, p1, v0
@@ -287,6 +322,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
@@ -296,8 +332,10 @@
 
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
+    .line 14
     iput-wide v3, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
+    .line 15
     :goto_0
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->min:D
 
@@ -307,6 +345,7 @@
 
     iput-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->min:D
 
+    .line 16
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->max:D
 
     invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(DD)D
@@ -571,6 +610,7 @@
 .method public count()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     return-wide v0
@@ -579,6 +619,7 @@
 .method public max()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x0
@@ -597,6 +638,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->max:D
 
     return-wide v0
@@ -605,6 +647,7 @@
 .method public mean()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x0
@@ -623,6 +666,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
     return-wide v0
@@ -631,6 +675,7 @@
 .method public min()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x0
@@ -649,6 +694,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->min:D
 
     return-wide v0
@@ -657,6 +703,7 @@
 .method public final populationStandardDeviation()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->populationVariance()D
 
     move-result-wide v0
@@ -671,6 +718,7 @@
 .method public final populationVariance()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x0
@@ -689,6 +737,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
@@ -701,6 +750,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
@@ -714,6 +764,7 @@
 
     return-wide v0
 
+    .line 4
     :cond_2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
@@ -733,6 +784,7 @@
 .method public final sampleStandardDeviation()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->sampleVariance()D
 
     move-result-wide v0
@@ -747,6 +799,7 @@
 .method public final sampleVariance()D
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->count:J
 
     const-wide/16 v2, 0x1
@@ -765,6 +818,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
@@ -777,6 +831,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
@@ -798,6 +853,7 @@
 .method public snapshot()Lcom/google/common/math/Stats;
     .locals 12
 
+    .line 1
     new-instance v11, Lcom/google/common/math/Stats;
 
     iget-wide v1, p0, Lcom/google/common/math/StatsAccumulator;->count:J
@@ -820,6 +876,7 @@
 .method public final sum()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->mean:D
 
     iget-wide v2, p0, Lcom/google/common/math/StatsAccumulator;->count:J
@@ -834,6 +891,7 @@
 .method public sumOfSquaresOfDeltas()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas:D
 
     return-wide v0

@@ -125,12 +125,12 @@
         }
     .end annotation
 
-    const/4 v10, 0x0
-
     .line 16
     invoke-static/range {p10 .. p11}, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->concatenateVorbisMetadata(Ljava/util/List;Ljava/util/List;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object v11
+
+    const/4 v10, 0x0
 
     move-object v0, p0
 
@@ -287,12 +287,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/VorbisUtil;->parseVorbisComments(Ljava/util/List;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -303,6 +305,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
@@ -464,6 +467,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>(Ljava/util/List;)V
@@ -472,6 +476,7 @@
 
     move-result-object v12
 
+    .line 2
     new-instance p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->minBlockSizeSamples:I
@@ -506,6 +511,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v12, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->minBlockSizeSamples:I
@@ -547,6 +553,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/VorbisUtil;->parseVorbisComments(Ljava/util/List;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object p1
@@ -555,6 +562,7 @@
 
     move-result-object v11
 
+    .line 2
     new-instance p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->minBlockSizeSamples:I
@@ -585,12 +593,14 @@
 .method public getApproxBytesPerFrame()J
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->maxFrameSize:I
 
     if-lez v0, :cond_0
 
     int-to-long v0, v0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->minFrameSize:I
 
     int-to-long v2, p0
@@ -608,6 +618,7 @@
 
     goto :goto_2
 
+    .line 3
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->minBlockSizeSamples:I
 
@@ -624,6 +635,7 @@
     :cond_1
     const-wide/16 v0, 0x1000
 
+    .line 4
     :goto_1
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->channels:I
 
@@ -652,6 +664,7 @@
 .method public getDecodedBitrate()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->bitsPerSample:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->sampleRate:I
@@ -668,6 +681,7 @@
 .method public getDurationUs()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->totalSamples:J
 
     const-wide/16 v2, 0x0
@@ -706,8 +720,10 @@
 
     const/16 v1, -0x80
 
+    .line 1
     aput-byte v1, p1, v0
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->maxFrameSize:I
 
     if-lez v0, :cond_0
@@ -717,37 +733,44 @@
     :cond_0
     const/4 v0, -0x1
 
+    .line 3
     :goto_0
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->getMetadataCopyWithAppendedEntriesFrom(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object p2
 
+    .line 4
     new-instance v1, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v2, "audio/flac"
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->channels:I
 
+    .line 7
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->sampleRate:I
 
+    .line 8
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 9
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -756,10 +779,12 @@
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -770,6 +795,7 @@
 .method public getMaxDecodedFrameSize()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->maxBlockSizeSamples:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->channels:I
@@ -794,6 +820,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     if-nez p0, :cond_0
@@ -812,6 +839,7 @@
 .method public getSampleNumber(J)J
     .locals 8
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->sampleRate:I
 
     int-to-long v0, v0
@@ -822,13 +850,14 @@
 
     div-long v2, p1, v0
 
-    const-wide/16 v4, 0x0
-
+    .line 2
     iget-wide p0, p0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->totalSamples:J
 
     const-wide/16 v0, 0x1
 
     sub-long v6, p0, v0
+
+    const-wide/16 v4, 0x0
 
     invoke-static/range {v2 .. v7}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 

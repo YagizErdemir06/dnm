@@ -23,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
     return-void
@@ -30,7 +31,16 @@
 
 .method private convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "is"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/util/Scanner;
 
     invoke-direct {p0, p1}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
@@ -41,6 +51,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/Scanner;->hasNext()Z
 
     move-result p1
@@ -64,7 +75,18 @@
 # virtual methods
 .method public getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "assetName",
+            "context"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/File;
 
     invoke-virtual {p2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -78,13 +100,25 @@
 
 .method public getCacheJsonString(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "assetName",
+            "context"
+        }
+    .end annotation
 
     const-string v0, "SimpleLocalJsonCacheRequest"
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;->getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p2
@@ -93,6 +127,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 3
     :try_start_0
     new-instance p2, Ljava/io/FileInputStream;
 
@@ -101,6 +136,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 4
     :try_start_1
     invoke-direct {p0, p2}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;->convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -109,6 +145,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     :try_start_2
     invoke-virtual {p2}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -119,6 +156,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_4
@@ -145,6 +183,7 @@
 
     move-object p2, v1
 
+    .line 7
     :goto_0
     :try_start_3
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -153,6 +192,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 8
     :try_start_4
     invoke-virtual {p2}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -163,6 +203,7 @@
     :catch_3
     move-exception p0
 
+    .line 9
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
@@ -172,6 +213,7 @@
     :goto_2
     if-eqz v1, :cond_1
 
+    .line 10
     :try_start_5
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -182,8 +224,10 @@
     :catch_4
     move-exception p1
 
+    .line 11
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 12
     :cond_1
     :goto_3
     throw p0
@@ -194,6 +238,15 @@
 .end method
 
 .method public abstract isCacheValid(Lcom/android/camera/resource/BaseResourceCacheable;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -202,6 +255,15 @@
 .end method
 
 .method public abstract processRestore(Lcom/android/camera/resource/BaseResourceCacheable;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -211,6 +273,17 @@
 
 .method public scheduleRequest(Lcom/android/camera/resource/ResponseListener;Lcom/android/camera/resource/BaseResourceCacheable;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "listener",
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -268,6 +341,16 @@
 
 .method public bridge synthetic scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "listener",
+            "resource"
+        }
+    .end annotation
 
     .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceCacheable;

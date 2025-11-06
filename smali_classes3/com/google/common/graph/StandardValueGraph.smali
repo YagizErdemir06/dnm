@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/StandardValueGraph;
+.class public Lcom/google/common/graph/StandardValueGraph;
 .super Lcom/google/common/graph/AbstractValueGraph;
 .source "SourceFile"
 
@@ -23,11 +23,11 @@
 # instance fields
 .field private final allowsSelfLoops:Z
 
-.field edgeCount:J
+.field public edgeCount:J
 
 .field private final isDirected:Z
 
-.field final nodeConnections:Lcom/google/common/graph/MapIteratorCache;
+.field public final nodeConnections:Lcom/google/common/graph/MapIteratorCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/graph/MapIteratorCache<",
@@ -171,6 +171,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -183,9 +184,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -236,6 +239,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -250,6 +254,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p0, p2}, Lcom/google/common/graph/GraphConnections;->value(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -272,6 +277,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -282,6 +288,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/GraphConnections;->successors()Ljava/util/Set;
 
     move-result-object p0
@@ -315,6 +322,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object p0
@@ -329,6 +337,7 @@
 .method public allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/graph/StandardValueGraph;->allowsSelfLoops:Z
 
     return p0
@@ -346,6 +355,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->containsKey(Ljava/lang/Object;)Z
@@ -358,6 +368,7 @@
 .method public edgeCount()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
     return-wide v0
@@ -511,10 +522,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lcom/google/common/graph/StandardValueGraph$1;
 
     invoke-direct {v1, p0, p0, p1, v0}, Lcom/google/common/graph/StandardValueGraph$1;-><init>(Lcom/google/common/graph/StandardValueGraph;Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;Lcom/google/common/graph/GraphConnections;)V
@@ -525,6 +538,7 @@
 .method public isDirected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/graph/StandardValueGraph;->isDirected:Z
 
     return p0
@@ -540,6 +554,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
     return-object p0
@@ -555,6 +570,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->unmodifiableKeySet()Ljava/util/Set;

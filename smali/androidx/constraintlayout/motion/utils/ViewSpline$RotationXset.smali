@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/utils/ViewSpline$RotationXset;
+.class public Landroidx/constraintlayout/motion/utils/ViewSpline$RotationXset;
 .super Landroidx/constraintlayout/motion/utils/ViewSpline;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewSpline;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->get(F)F
 
     move-result p0

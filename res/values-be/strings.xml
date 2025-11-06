@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Кнопка здымкі фота падчас запісу відэа</string>
     <string name="accessibility_video_pause_button">Запіс відэа прыпынены</string>
     <string name="accessibility_video_resume_button">Запіс відэа адноўлены</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Вадзяны знак адключаны</string>
     <string name="accessibility_watermark_image_on">Вадзяны знак уключаны</string>
     <string name="accessibility_watermark_text">Адкрыць панэль налады вадзянога знака</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Набліжэнне</string>
     <string name="actionbar_button_up_description">Назад</string>
     <string name="afternoon">Поўдзень</string>
-    <string name="agent_flip_tbc">Працягнуць на ўнутраным экране</string>
-    <string name="agent_function_max">Адкарэктавана да максімальнага значэння</string>
-    <string name="agent_function_min">Адкарэктавана да мінімальнага значэння</string>
-    <string name="agent_workspace_mode_not_supported">Гэта функцыя не падтрымліваецца</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Гэтая функцыя не падтрымліваецца.
-Замест гэтага адкрыты Фотарэжым."</string>
-    <string name="agent_workspace_on">Усталяваны параметры для фатаграфавання \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Вывучэнне сцэны</string>
-    <string name="agent_workspace_tbc_use_default">"Вывучэнне сцэны…
-Параметры камеры ўсталяваны па змаўчанні"</string>
     <string name="ai_agra_fort">Агра-форт</string>
     <string name="ai_amber_fort">Амбер</string>
     <string name="ai_baby">Дзіця</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">Для вызначэння стану падлучэння Bluetooth-навушнікаў і запіса гуку з дапамогай мікрафона навушнікаў.</string>
     <string name="bluetooth_permission_not_ask_again">Каб падлучыць Bluetooth-навушнікі, дазвольце гэтай праграме падлучацца да прылад паблізу ў раздзеле «Налады».</string>
     <string name="bokeh_use_hint">Эфект глыбіні</string>
-    <string name="bottomsheet_action_expand_halfway">Разгарнуць напалову</string>
     <string name="burst_shoot_exit_button_text">Адключыць серыйную здымку</string>
     <string name="button_fisheye_camera_title">Рыбіна вока</string>
     <string name="button_front_camera_title">Зрабіць сэлфі</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">Ваша прылада перагрэлась. Камера будзе зачынена праз %d секунд(-ы). Вашы фота або відэа будуць захаваны аўтаматычна.</string>
     <string name="ccc_temperature_warning_title">Прылада перагрэлася</string>
     <string name="center_mark">Пазнака цэнтра</string>
-    <string name="character_counter_content_description">Уведзена сімвалаў: %1$d з %2$d</string>
-    <string name="character_counter_overflowed_content_description">Абмежаванне колькасці сімвалаў перавышана: %1$d з %2$d</string>
     <string name="cinemaster_cancel">Адмена</string>
     <string name="cinemaster_confirm">Выйсці</string>
     <string name="cinemaster_connect_exit_message">Выйсці з налады мультыкамеры прама зараз?</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">Манітор адключаны ад налады мультыкамеры</string>
     <string name="cinemaster_toast_monitor_play_error">Камера%s адключаная ад налады мультыкамеры з-за памылкі</string>
     <string name="cinemaster_wifi_24g_tips">Пераключыцеся на сетку %s ГГц, каб павысіць стабільнасць канала манітора</string>
-    <string name="clear_text_end_icon_content_description">Ачысціць тэкст</string>
     <string name="clearable_edittext_clear_description">Ачысціць</string>
     <string name="clone_adjust">Рэгуляваць</string>
     <string name="clone_copy_mode">Спыніць кадр</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">"Падобна на тое, што ваша прылада не падключана да WLAN. Выкарыстоўваць %1$s МБ мабільных дадзеных для запампоўкі аб'ектаў зараз?"</string>
     <string name="download_hint_wifi">"Падобна на тое, што ваша прылада не падключана да Wi-Fi. Выкарыстаць %1$s МБ мабільных дадзеных для запампоўкі аб'ектаў зараз?"</string>
     <string name="download_in_progress">Спампоўка…</string>
-    <string name="download_network_error">Не атрымалася спампаваць. Праверце налады сеткі.</string>
     <string name="download_title">Папярэджанне пра трафік</string>
     <string name="download_waiting">Чаканне…</string>
     <string name="dual_camera_lens_covered_toast">"Аб'ектыў зачынены."</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">н. э.</string>
     <string name="eras_bc">до н. э.</string>
     <string name="error_fail_to_start_audio_capture">Не атрымалася запісаць гук</string>
-    <string name="error_icon_content_description">Памылка</string>
     <string name="esp_tip">Прадпрагляд пярэдняга экрана</string>
     <string name="evening">Поўдзень</string>
     <string name="exo_controls_cc_disabled_description">Уключыць субцітры</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">"Аб'ёмны гук 7.1"</string>
     <string name="exo_track_unknown">Невядома</string>
     <string name="expand_button_title">Пашыраныя налады</string>
-    <string name="exposed_dropdown_menu_content_description">Паказаць выпадное меню</string>
     <string name="exposure_mode_adjust_title">Рэжым экспазіцыі</string>
     <string name="eye_light">Бляск вачэй</string>
     <string name="eye_light_angel">Анёл</string>
@@ -1094,7 +1076,6 @@
     <string name="hint_subtitle_prompt">Цяпер вы можаце дыктаваць субтытры</string>
     <string name="histogram_summary_tip">Паказаць зваротную сувязь па экспазіцыі ў рэальным часе</string>
     <string name="hunt_dual_water_mark">Вадзяны знак стэрэакамеры будзе дададзены аўтаматычна.</string>
-    <string name="icon_content_description">Значок дыялогавага акна</string>
     <string name="id_card_mode_hint_back">Адскануйце зваротны бок свайго пасведчання асобы</string>
     <string name="id_card_mode_hint_front">Адскануйце пярэдні бок свайго пасведчання асобы</string>
     <string name="id_card_mode_use_hint_text_body">"Аб'ядноўвайце абодва бакі свайго пасведчання асобы ў адной выяве.
@@ -1105,7 +1086,6 @@
     <string name="invisible_mode_dialog_summary">Зараз немагчыма выкарыстаць камеру. Выключыце рэжым Інкогніта у наладах, каб выкарыстаць камеру.</string>
     <string name="invisible_mode_dialog_title">Вы ў рэжыме інкогніта</string>
     <string name="invisible_mode_dialog_to_close">Налады</string>
-    <string name="item_view_role_description">Укладка</string>
     <string name="kaleidoscope_fragment_tab_name">Калейдаскоп</string>
     <string name="lens_dirty_detected_content">"Аб'ектыў вашай камеры забруджаны.
 Ачысціце аб'ектыў для паляпшэння здымкаў."</string>
@@ -1228,18 +1208,6 @@
     <string name="manually_raw_tip">Павелічэнне ў фармаце RAW немагчыма</string>
     <string name="manually_ultra_raw_tip">Немагчыма выкарыстоўваць маштабаванне з Ultra RAW</string>
     <string name="masterfilter_description_title">Кінофільтры</string>
-    <string name="material_clock_toggle_content_description">Выберыце AM (да паўдня) або PM (пасля паўдня)</string>
-    <string name="material_hour_selection">Выберыце гадзіну</string>
-    <string name="material_hour_suffix">%1$s гадз</string>
-    <string name="material_minute_selection">Выберыце хвіліны</string>
-    <string name="material_minute_suffix">%1$s хв</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Пераключыцца на рэжым гадзінніка пры ўводзе часу.</string>
-    <string name="material_timepicker_hour">Гадзіна</string>
-    <string name="material_timepicker_minute">Хвіліна</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Выберыце час</string>
-    <string name="material_timepicker_text_input_mode_description">Пераключыцца на рэжым тэксту пры ўводзе часу.</string>
     <string name="message_snap_double_confirm">Доўгае ўтрыманне кнопкі гучнасці запускае NFC. Замяніць гэтую функцыю?</string>
     <string name="midnight">Ноч</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@
     <string name="miuix_appcompat_delete_description">Выдаліць</string>
     <string name="miuix_appcompat_deselect_all">Зняць выбар з усіх</string>
     <string name="miuix_appcompat_deselect_all_description">Зняць выбар</string>
-    <string name="miuix_appcompat_edit">Змяніць</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Скасаваць</string>
     <string name="miuix_appcompat_search_input_description">Пошук</string>
     <string name="miuix_appcompat_select_all">Выбраць усё</string>
@@ -1486,42 +1453,6 @@
     <string name="msg_bubble_doc4_first_use">Націсніце, каб распазнаць тэкст</string>
     <string name="msg_toast_doc4_recognition_failed">Адбылася памылка. Паспрабуйце яшчэ раз.</string>
     <string name="msg_toast_doc4_text_not_found">Не атрымалася выявіць тэкст</string>
-    <string name="mtrl_badge_numberless_content_description">Новае апавяшчэнне</string>
-    <string name="mtrl_chip_close_icon_content_description">Выдаліць %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Колькасць новых апавяшчэнняў перавысіла %1$d</string>
-    <string name="mtrl_picker_a11y_next_month">Перайсці да наступнага месяца</string>
-    <string name="mtrl_picker_a11y_prev_month">Перайсці да папярэдняга месяца</string>
-    <string name="mtrl_picker_announce_current_selection">Бягучае вылучэнне: %1$s</string>
-    <string name="mtrl_picker_cancel">Скасаваць</string>
-    <string name="mtrl_picker_confirm">ОК</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Выберыце дату</string>
-    <string name="mtrl_picker_date_header_unselected">Выбраная дата</string>
-    <string name="mtrl_picker_day_of_week_column_header">Слупок дзён: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Няправільны фармат.</string>
-    <string name="mtrl_picker_invalid_format_example">Прыклад: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Неабходны фармат: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Няправільны дыяпазон.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Перайсці ў %1$s год</string>
-    <string name="mtrl_picker_out_of_range">Па-за межамі дыяпазону: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Дата пачатку – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – дата заканчэння</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Выберыце дыяпазон дат</string>
-    <string name="mtrl_picker_range_header_unselected">Дата пачатку – дата заканчэння</string>
-    <string name="mtrl_picker_save">Захаваць</string>
-    <string name="mtrl_picker_text_input_date_hint">Дата</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Дата заканчэння</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Дата пачатку</string>
-    <string name="mtrl_picker_text_input_day_abbr">д</string>
-    <string name="mtrl_picker_text_input_month_abbr">м</string>
-    <string name="mtrl_picker_text_input_year_abbr">г</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Пераключыцца ў рэжым уводу \"Каляндар\"</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Дакраніцеся, каб пераключыцца на выбар дня</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Пераключыцца ў рэжым уводу \"Тэкст\"</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Дакраніцеся, каб пераключыцца на выбар года</string>
-    <string name="mtrl_timepicker_cancel">Скасаваць</string>
-    <string name="mtrl_timepicker_confirm">ОК</string>
     <string name="multi_window_mode_not_supported">Камера нельга выкарыстоўваць у шматваконнам рэжыме</string>
     <string name="network_access_user_notice_agree">Згадзіцца</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Камеры патрабуецца доступ да Інтэрнэту для прадастаўлення эфектаў, музыкі і іншых магчымасцяў для кароткіх відэа.&lt;br/>&lt;br/>Націскаючы на ​​\"Пагадзіцца\" ніжэй, вы згаджаецеся з нашымі &lt;a href =%1$s>Карыстальніцкім пагадненнем&lt;/a> і &lt;a href =%2$s>Палітыкай прыватнасці&lt;/a> i дазваляеце Камере падлучыцца да Інтэрнэту.&lt;/Data></string>
@@ -1616,7 +1547,6 @@
     <string name="parameter_wb_title">Баланс белага</string>
     <string name="parameter_zoom_slider_description">Перацягвайце паўзунок маштабавання гарызантальна, каб плаўна змяняць набліжэнне вашага здымка ад далёкага да буйнога плана.</string>
     <string name="parameter_zoom_slider_title">Маштабаванне</string>
-    <string name="password_toggle_content_description">Паказаць пароль</string>
     <string name="path_settings">Сістэмныя праграмы/Камера/Налады</string>
     <string name="photo_assistance_tips_title">Парады ў рэальным часе</string>
     <string name="pic_flaw_blink_more">Здаецца, у каго-то ў кадры зачыненыя вочы</string>
@@ -2359,7 +2289,6 @@
     <string name="time_picker_label_hour">Г</string>
     <string name="time_picker_label_minute">Х</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Вы можаце спыняць фон і адмяняць спыненне фону ў любы час да або падчас здымкі.</string>
     <string name="timefreeze_guide_tip3">"Папрасіце свайго суб'екта заставацца ў цэнтры кадра."</string>
     <string name="timefreeze_guide_tip4">Прымусьце дарожны рух спыніцца.</string>
@@ -2397,7 +2326,7 @@
     <string name="tip_flash_screen_light_on">Мяккая ўспышка: ўкл.</string>
     <string name="tip_flash_soft_light_off">Мяккі выбліск: адкл.</string>
     <string name="tip_flash_soft_light_torch">Мяккі выбліск: рэжым ліхтарыка</string>
-    <string name="tip_flash_torch">Выбліск: ліхтарык</string>
+    <string name="tip_flash_torch">Выбліск: заўсёды ўкл.</string>
     <string name="tip_friend_mode_connect_when_24GHz">Выкарыстоўвайце падлучэнне %s ГГц для павышэння якасці папярэдняга прасомтра</string>
     <string name="tip_friend_mode_display_device_name_connect">Агульны папярэдні прагляд</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Іншая прылада пакінула гэты сеанс</string>

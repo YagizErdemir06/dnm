@@ -7,8 +7,10 @@
 .method public static zza(Ljava/util/Iterator;)V
     .locals 1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -16,8 +18,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0

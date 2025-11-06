@@ -34,6 +34,7 @@
 
     sget v0, Lcom/google/android/gms/common/internal/service/zao;->zab:I
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getService()Landroid/os/IInterface;
 
     move-result-object p1
@@ -44,6 +45,7 @@
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {p2, p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
 
     return-void

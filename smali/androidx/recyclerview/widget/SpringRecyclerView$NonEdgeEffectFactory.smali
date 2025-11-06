@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffectFactory;
+.class public Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffectFactory;
 .super Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;
 .source "SourceFile"
 
@@ -44,9 +44,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance p0, Landroidx/recyclerview/widget/SpringRecyclerView$NonEdgeEffect;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 

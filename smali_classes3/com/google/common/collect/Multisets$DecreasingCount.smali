@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Multisets$DecreasingCount;
+.class public final Lcom/google/common/collect/Multisets$DecreasingCount;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/Multisets$DecreasingCount;
+.field public static final INSTANCE:Lcom/google/common/collect/Multisets$DecreasingCount;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multisets$DecreasingCount;
 
     invoke-direct {v0}, Lcom/google/common/collect/Multisets$DecreasingCount;-><init>()V
@@ -46,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

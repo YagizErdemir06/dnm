@@ -6,7 +6,16 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     .line 1
@@ -17,6 +26,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -26,7 +45,20 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 3
@@ -47,12 +79,28 @@
 
 .method public setFrame(IIII)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "l",
+            "t",
+            "r",
+            "b"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setFrame(IIII)Z
 
     move-result p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/TextView;->getVisibility()I
 
     move-result p2
 
@@ -60,11 +108,13 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->onVisibilityAggregated(Z)V
+    .line 3
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->onVisibilityAggregated(Z)V
 
     const/4 p2, 0x1
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->onVisibilityAggregated(Z)V
+    .line 4
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->onVisibilityAggregated(Z)V
 
     :cond_0
     return p1

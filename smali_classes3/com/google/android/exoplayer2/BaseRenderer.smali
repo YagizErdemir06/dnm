@@ -48,10 +48,13 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->trackType:I
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/FormatHolder;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/FormatHolder;-><init>()V
@@ -60,6 +63,7 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
     return-void
@@ -194,36 +198,43 @@
 .method public final disable()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    if-ne v0, v2, :cond_0
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    move v1, v2
 
     :goto_0
-    invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
+    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/FormatHolder;->clear()V
 
-    iput v1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
+    .line 3
+    iput v2, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamFormats:[Lcom/google/android/exoplayer2/Format;
 
-    iput-boolean v1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
+    .line 6
+    iput-boolean v2, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->onDisabled()V
 
     return-void
@@ -241,6 +252,7 @@
 
     move v8, p6
 
+    .line 1
     iget v0, v7, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     const/4 v1, 0x1
@@ -259,12 +271,15 @@
 
     move-object v0, p1
 
+    .line 2
     iput-object v0, v7, Lcom/google/android/exoplayer2/BaseRenderer;->configuration:Lcom/google/android/exoplayer2/RendererConfiguration;
 
+    .line 3
     iput v1, v7, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     move/from16 v0, p7
 
+    .line 4
     invoke-virtual {p0, p6, v0}, Lcom/google/android/exoplayer2/BaseRenderer;->onEnabled(ZZ)V
 
     move-object v0, p0
@@ -277,10 +292,12 @@
 
     move-wide/from16 v5, p10
 
+    .line 5
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/exoplayer2/BaseRenderer;->replaceStream([Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/source/SampleStream;JJ)V
 
     move-wide v0, p4
 
+    .line 6
     invoke-direct {p0, p4, p5, p6}, Lcom/google/android/exoplayer2/BaseRenderer;->resetPosition(JZ)V
 
     return-void
@@ -295,6 +312,7 @@
 .method public final getConfiguration()Lcom/google/android/exoplayer2/RendererConfiguration;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->configuration:Lcom/google/android/exoplayer2/RendererConfiguration;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -309,10 +327,12 @@
 .method public final getFormatHolder()Lcom/google/android/exoplayer2/FormatHolder;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/FormatHolder;->clear()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
     return-object p0
@@ -321,6 +341,7 @@
 .method public final getIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->index:I
 
     return p0
@@ -329,6 +350,7 @@
 .method public final getLastResetPositionUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->lastResetPositionUs:J
 
     return-wide v0
@@ -347,6 +369,7 @@
 .method public final getPlayerId()Lcom/google/android/exoplayer2/analytics/PlayerId;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->playerId:Lcom/google/android/exoplayer2/analytics/PlayerId;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -361,6 +384,7 @@
 .method public final getReadingPositionUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
     return-wide v0
@@ -369,6 +393,7 @@
 .method public final getState()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     return p0
@@ -379,6 +404,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
     return-object p0
@@ -387,6 +413,7 @@
 .method public final getStreamFormats()[Lcom/google/android/exoplayer2/Format;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamFormats:[Lcom/google/android/exoplayer2/Format;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -401,6 +428,7 @@
 .method public final getTrackType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->trackType:I
 
     return p0
@@ -424,6 +452,7 @@
 .method public final hasReadStreamToEnd()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
     const-wide/high16 v2, -0x8000000000000000L
@@ -446,8 +475,10 @@
 .method public final init(ILcom/google/android/exoplayer2/analytics/PlayerId;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->index:I
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/BaseRenderer;->playerId:Lcom/google/android/exoplayer2/analytics/PlayerId;
 
     return-void
@@ -456,6 +487,7 @@
 .method public final isCurrentStreamFinal()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
 
     return p0
@@ -464,6 +496,7 @@
 .method public final isSourceReady()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->hasReadStreamToEnd()Z
 
     move-result v0
@@ -499,6 +532,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -577,6 +611,7 @@
 .method public final readSource(Lcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -593,6 +628,7 @@
 
     if-ne p3, v0, :cond_2
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
 
     move-result p1
@@ -601,8 +637,10 @@
 
     const-wide/high16 p1, -0x8000000000000000L
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
+    .line 4
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
 
     if-eqz p0, :cond_0
@@ -615,6 +653,7 @@
     :goto_0
     return v0
 
+    .line 5
     :cond_1
     iget-wide v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
@@ -624,6 +663,7 @@
 
     iput-wide v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
+    .line 6
     iget-wide p1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->max(JJ)J
@@ -639,6 +679,7 @@
 
     if-ne p3, p2, :cond_3
 
+    .line 7
     iget-object p2, p1, Lcom/google/android/exoplayer2/FormatHolder;->format:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -647,6 +688,7 @@
 
     check-cast p2, Lcom/google/android/exoplayer2/Format;
 
+    .line 8
     iget-wide v0, p2, Lcom/google/android/exoplayer2/Format;->subsampleOffsetUs:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -655,6 +697,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 9
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
@@ -665,14 +708,17 @@
 
     add-long/2addr v1, v3
 
+    .line 10
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSubsampleOffsetUs(J)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
 
+    .line 12
     iput-object p0, p1, Lcom/google/android/exoplayer2/FormatHolder;->format:Lcom/google/android/exoplayer2/Format;
 
     :cond_3
@@ -688,14 +734,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
     const-wide/high16 v2, -0x8000000000000000L
@@ -704,11 +753,14 @@
 
     if-nez p2, :cond_0
 
+    .line 4
     iput-wide p3, p0, Lcom/google/android/exoplayer2/BaseRenderer;->readingPositionUs:J
 
+    .line 5
     :cond_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamFormats:[Lcom/google/android/exoplayer2/Format;
 
+    .line 6
     iput-wide p5, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamOffsetUs:J
 
     move-object v0, p0
@@ -719,6 +771,7 @@
 
     move-wide v4, p5
 
+    .line 7
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/exoplayer2/BaseRenderer;->onStreamChanged([Lcom/google/android/exoplayer2/Format;JJ)V
 
     return-void
@@ -727,6 +780,7 @@
 .method public final reset()V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     if-nez v0, :cond_0
@@ -741,10 +795,12 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/FormatHolder;->clear()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->onReset()V
 
     return-void
@@ -771,6 +827,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->streamIsFinal:Z
 
     return-void
@@ -779,6 +836,7 @@
 .method public skipSource(J)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->stream:Lcom/google/android/exoplayer2/source/SampleStream;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -806,6 +864,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
     const/4 v1, 0x1
@@ -822,8 +881,10 @@
 
     const/4 v0, 0x2
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->onStarted()V
 
     return-void
@@ -832,15 +893,16 @@
 .method public final stop()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
@@ -850,8 +912,10 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    iput v2, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
+    .line 2
+    iput v1, p0, Lcom/google/android/exoplayer2/BaseRenderer;->state:I
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->onStopped()V
 
     return-void

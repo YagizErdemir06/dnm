@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/CacheLoader$SupplierToCacheLoader;
+.class public final Lcom/google/common/cache/CacheLoader$SupplierToCacheLoader;
 .super Lcom/google/common/cache/CacheLoader;
 .source "SourceFile"
 
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/CacheLoader;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -80,8 +82,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/cache/CacheLoader$SupplierToCacheLoader;->computingSupplier:Lcom/google/common/base/Supplier;
 
     invoke-interface {p0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;

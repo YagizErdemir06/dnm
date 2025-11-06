@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Video yozish paytida rasmga tushirish tugmasi</string>
     <string name="accessibility_video_pause_button">Video yozuv to‘xtatildi</string>
     <string name="accessibility_video_resume_button">Video yozuv davom ettirildi</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Suv belgisi o‘chirilgan</string>
     <string name="accessibility_watermark_image_on">Suv belgisi yoqilgan</string>
     <string name="accessibility_watermark_text">Suv belgisini sozlash panelini oching</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Yaqinlashtirish</string>
     <string name="actionbar_button_up_description">Orqaga</string>
     <string name="afternoon">Kunduzi</string>
-    <string name="agent_flip_tbc">Ichki ekranda davom eting</string>
-    <string name="agent_function_max">Maksimal qiymatga sozlangan</string>
-    <string name="agent_function_min">Minimum qiymatga sozlangan</string>
-    <string name="agent_workspace_mode_not_supported">Bu xususiyat qo‘llab-quvvatlanmaydi</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Bu xususiyat qo‘llab-quvvatlanmaydi.
-Buning o‘rniga Rasm rejimi ochildi."</string>
-    <string name="agent_workspace_on">“%1$s” suratga olish parametrlari</string>
-    <string name="agent_workspace_tbc">O‘rganish sahnasi</string>
-    <string name="agent_workspace_tbc_use_default">"O‘rganish sahnasi…
-Kamera parametrlari birlamchi sifatida o‘rnatilgan"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Amber</string>
     <string name="ai_baby">Chaqaloq</string>
@@ -781,7 +770,6 @@ hujjatlarni avtomatik ravishda tartiblash va yaxshilash"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Siz Wi-Fi tarmog‘iga ulanmaganga o‘xshaysiz. Elementlarni yuklab olish uchun %1$s MB mobil internetdan foydalanilsinmi?</string>
     <string name="download_in_progress">Yuklab olinmoqda…</string>
-    <string name="download_network_error">Yuklab bo‘lmadi. Tarmoq sozlamalarini tekshiring.</string>
     <string name="download_title">Trafik haqida ogohlantirish</string>
     <string name="download_waiting">Kutilmoqda…</string>
     <string name="dual_camera_lens_covered_toast">Linza yopilgan.</string>
@@ -1260,7 +1248,6 @@ Portret rejimida foydalanishingiz mumkin"</string>
     <string name="miuix_appcompat_delete_description">O‘chirish</string>
     <string name="miuix_appcompat_deselect_all">Barchasini olib tashlash</string>
     <string name="miuix_appcompat_deselect_all_description">Barchasini olib tashlash</string>
-    <string name="miuix_appcompat_edit">O‘zgartirish</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Bekor qilish</string>
     <string name="miuix_appcompat_search_input_description">Qidiruv</string>
     <string name="miuix_appcompat_select_all">Barchasini tanlash</string>
@@ -2199,7 +2186,6 @@ Fonni xira qilgan holda, ob‘ektni fokusda saqlang."</string>
     <string name="time_picker_label_hour">S</string>
     <string name="time_picker_label_minute">D</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Rasmga tushirishdan oldin yoki tushirish paytida istalgan vaqtda fonni muzlatishingiz va harakatlantirishingiz mumkin.</string>
     <string name="timefreeze_guide_tip3">Tushirayotgan odam ramkaning markazida bo‘lishi kerak.</string>
     <string name="timefreeze_guide_tip4">Transport harakatini to‘xtating.</string>
@@ -2237,7 +2223,7 @@ Fonni xira qilgan holda, ob‘ektni fokusda saqlang."</string>
     <string name="tip_flash_screen_light_on">Yumshoq miltillash: Yoqilgan</string>
     <string name="tip_flash_soft_light_off">"Yumshoq miltillovchi: O'chiq"</string>
     <string name="tip_flash_soft_light_torch">Yumshoq miltillovchi: Chiroq rejimi</string>
-    <string name="tip_flash_torch">Chiroq: Chiroq</string>
+    <string name="tip_flash_torch">Flash: Har doim yoniq</string>
     <string name="tip_friend_mode_connect_when_24GHz">Oldindan ko‘rish sifatini oshirish uchun gigagertsli ulanish %s dan foydalaning</string>
     <string name="tip_friend_mode_display_device_name_connect">Umumiy ko‘rish</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Boshqa qurilma bu seansni tark etdi</string>

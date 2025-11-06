@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;
+.class public Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field transient _impl:Lorg/apache/xmlbeans/XmlObject;
+.field public transient _impl:Lorg/apache/xmlbeans/XmlObject;
 
-.field transient _root:Lorg/apache/xmlbeans/XmlObject;
+.field public transient _root:Lorg/apache/xmlbeans/XmlObject;
 
 
 # direct methods
@@ -64,6 +64,7 @@
 .method private distanceToRoot()I
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->_impl:Lorg/apache/xmlbeans/XmlObject;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlTokenSource;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
@@ -72,6 +73,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toPrevToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
@@ -84,6 +86,7 @@
 
     if-nez v1, :cond_1
 
+    .line 3
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->currentTokenType()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
     move-result-object v1
@@ -98,6 +101,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
@@ -107,6 +111,7 @@
 .method private objectAtDistance(I)Lorg/apache/xmlbeans/XmlObject;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->_root:Lorg/apache/xmlbeans/XmlObject;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlTokenSource;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
@@ -117,8 +122,10 @@
     :goto_0
     if-lez p1, :cond_1
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toNextToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
+    .line 3
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->currentTokenType()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
     move-result-object v0
@@ -133,11 +140,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->getObject()Lorg/apache/xmlbeans/XmlObject;
 
     move-result-object p1
 
+    .line 5
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p1
@@ -152,6 +161,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -160,8 +170,10 @@
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->_root:Lorg/apache/xmlbeans/XmlObject;
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readBoolean()Z
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result p1
@@ -183,6 +195,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->_impl:Lorg/apache/xmlbeans/XmlObject;
 
     return-object p0
@@ -196,14 +209,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->_root:Lorg/apache/xmlbeans/XmlObject;
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeBoolean(Z)V
 
+    .line 3
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;->distanceToRoot()I
 
     move-result p0

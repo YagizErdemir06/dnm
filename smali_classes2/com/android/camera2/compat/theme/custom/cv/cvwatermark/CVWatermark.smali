@@ -19,6 +19,7 @@
 
     const-wide/32 v0, 0x3b9aca00
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -30,9 +31,10 @@
 
 .method private constructor <init>()V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +42,14 @@
 
 .method public static formatExposureTime(J)Ljava/lang/String;
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "exposureTime"
+        }
+    .end annotation
 
     long-to-float p0, p0
 
@@ -47,6 +57,7 @@
 
     mul-float/2addr p0, p1
 
+    .line 1
     sget-object p1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->NS_TO_S:Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -59,6 +70,7 @@
 
     float-to-double p0, p0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,6 +101,7 @@
 
     if-gez v0, :cond_0
 
+    .line 3
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -124,6 +137,7 @@
 
     if-gez v0, :cond_1
 
+    .line 4
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -161,6 +175,7 @@
 
     if-gez v0, :cond_2
 
+    .line 5
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -177,6 +192,7 @@
 
     return-object p0
 
+    .line 6
     :cond_2
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -203,11 +219,21 @@
 
 .method public static formatLatLong(D)Ljava/lang/String;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p0
@@ -234,28 +260,35 @@
 
     long-to-int v1, v1
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, "\u00b0"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     long-to-int v1, v5
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, "\'"
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     long-to-int p0, p0
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p0, "\""
 
+    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -268,6 +301,22 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "exposureTime",
+            "iso",
+            "focalLength",
+            "aperture"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,12 +325,15 @@
 
     if-lez p3, :cond_0
 
+    .line 2
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p3, "mm"
 
+    .line 3
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -293,10 +345,13 @@
 
     const-string p3, "f/"
 
+    .line 5
     invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
@@ -306,12 +361,15 @@
 
     if-lez p3, :cond_2
 
+    .line 8
     invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->formatExposureTime(J)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_2
@@ -319,10 +377,13 @@
 
     const-string p0, "ISO"
 
+    .line 11
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 12
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 13
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -334,24 +395,28 @@
 .method public static getInstance()Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->sCvWatermark:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
 
     if-nez v0, :cond_3
 
+    .line 2
     const-class v0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->sCvWatermark:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
 
     if-nez v1, :cond_2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 4
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lid/b;->j0()I
+    invoke-virtual {v1}, Ld/k/a/b;->h0()I
 
     move-result v1
 
@@ -363,6 +428,7 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 5
     new-instance v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;
 
     invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;-><init>()V
@@ -371,6 +437,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/FourSideFilm;
 
@@ -380,6 +447,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/SingleSideFilm;
 
@@ -387,6 +455,7 @@
 
     sput-object v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->sCvWatermark:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
 
+    .line 8
     :cond_2
     :goto_0
     monitor-exit v0
@@ -402,6 +471,7 @@
 
     throw v1
 
+    .line 9
     :cond_3
     :goto_1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->sCvWatermark:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/ICvWatermark;
@@ -411,6 +481,14 @@
 
 .method public static getLocationStr(Landroid/location/Location;)Ljava/lang/String;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "location"
+        }
+    .end annotation
 
     if-nez p0, :cond_0
 
@@ -418,19 +496,23 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v1
 
+    .line 3
     invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v3
 
+    .line 4
     invoke-static {v1, v2}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->formatLatLong(D)Ljava/lang/String;
 
     move-result-object p0
@@ -450,13 +532,16 @@
     :cond_1
     const-string p0, "S"
 
+    .line 5
     :goto_0
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, "  "
 
+    .line 6
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-static {v3, v4}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->formatLatLong(D)Ljava/lang/String;
 
     move-result-object p0
@@ -474,9 +559,11 @@
     :cond_2
     const-string p0, "W"
 
+    .line 8
     :goto_1
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -486,7 +573,18 @@
 
 .method public static getRatio(II)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pictureWidth",
+            "pictureHeight"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -509,7 +607,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "timeStamp"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -517,12 +625,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f140be8
+    const v1, 0x7f130b63
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,6 +646,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -547,7 +657,7 @@
 
     invoke-direct {v0, p0, p1}, Ljava/util/Date;-><init>(J)V
 
-    invoke-virtual {v1, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
 

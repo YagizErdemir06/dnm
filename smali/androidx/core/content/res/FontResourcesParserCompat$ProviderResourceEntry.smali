@@ -88,6 +88,7 @@
 .method public getFetchStrategy()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mStrategy:I
 
     return p0
@@ -98,6 +99,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mRequest:Landroidx/core/provider/FontRequest;
 
     return-object p0
@@ -114,6 +116,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mSystemFontFamilyName:Ljava/lang/String;
 
     return-object p0
@@ -122,6 +125,7 @@
 .method public getTimeout()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->mTimeoutMs:I
 
     return p0

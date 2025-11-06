@@ -1,4 +1,4 @@
-.class Landroidx/core/app/NotificationCompat$BigPictureStyle$Api23Impl;
+.class public Landroidx/core/app/NotificationCompat$BigPictureStyle$Api23Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +34,7 @@
         value = 0x17
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void

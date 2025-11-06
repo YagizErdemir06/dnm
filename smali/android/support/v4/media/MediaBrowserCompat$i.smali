@@ -36,6 +36,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/MediaBrowserCompat$h;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/support/v4/media/MediaBrowserCompat$c;Landroid/os/Bundle;)V
 
     return-void
@@ -70,6 +71,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->g:Landroid/support/v4/media/MediaBrowserCompat$m;
 
     if-eqz v0, :cond_1
@@ -82,6 +84,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserCompat$g;->b(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$o;)V
 
@@ -91,6 +94,7 @@
     :goto_0
     if-nez p2, :cond_2
 
+    .line 3
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->b:Landroid/media/browse/MediaBrowser;
 
     iget-object p2, p3, Landroid/support/v4/media/MediaBrowserCompat$o;->a:Landroid/media/browse/MediaBrowser$SubscriptionCallback;
@@ -99,6 +103,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->b:Landroid/media/browse/MediaBrowser;
 
@@ -127,6 +132,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->g:Landroid/support/v4/media/MediaBrowserCompat$m;
 
     if-eqz v0, :cond_1
@@ -139,6 +145,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$g;->c(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$o;)V
 
@@ -148,12 +155,14 @@
     :goto_0
     if-nez p2, :cond_2
 
+    .line 3
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->b:Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0, p1}, Landroid/media/browse/MediaBrowser;->unsubscribe(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 4
     :cond_2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->b:Landroid/media/browse/MediaBrowser;
 

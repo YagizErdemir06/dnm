@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMultimap$Builder;-><init>()V
 
     return-void
@@ -138,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Platform;->preservesInsertionOrderOnAddsSet()Ljava/util/Set;
 
     move-result-object p0

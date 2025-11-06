@@ -18,14 +18,17 @@
     :try_start_0
     const-string v0, "camera_beauty_mpbase"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "camera_arcsoft_beautyshot"
 
+    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "jni_arcsoft_beautyshot"
 
+    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -35,6 +38,7 @@
     :catch_0
     move-exception v0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +47,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/UnsatisfiedLinkError;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -68,19 +72,45 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     return-void
 .end method
 
 .method public static native flipYuvHorizontal([BII)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "yuv",
+            "width",
+            "height"
+        }
+    .end annotation
 .end method
 
 .method public static native flipYuvVertical([BII)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "yuv",
+            "width",
+            "height"
+        }
+    .end annotation
 .end method
 
 .method private native nativeInit()V
@@ -90,22 +120,72 @@
 .end method
 
 .method private native processByBeautyLevel(Landroid/content/res/AssetManager;[BIIIII)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "assetsManager",
+            "nv21data",
+            "width",
+            "height",
+            "orientation",
+            "region",
+            "beautyLevel"
+        }
+    .end annotation
 .end method
 
 .method private native processBySmoothLevel(Landroid/content/res/AssetManager;[BIIIII)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "assetsManager",
+            "nv21data",
+            "width",
+            "height",
+            "orientation",
+            "region",
+            "smoothLevel"
+        }
+    .end annotation
 .end method
 
 
 # virtual methods
 .method public init(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera/beautyshot/BeautyShot;->nativeInit()V
 
     return-void
@@ -113,22 +193,42 @@
 
 .method public processByBeautyLevel([BIIIII)I
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "nv21data",
+            "width",
+            "height",
+            "orientation",
+            "region",
+            "beautyLevel"
+        }
+    .end annotation
 
+    .line 1
     iget-object v1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     if-nez v1, :cond_0
 
-    const-string p0, "BeautyShot is not initialized"
+    const/4 p0, 0x0
 
-    const/4 p1, 0x0
+    new-array p1, p0, [Ljava/lang/Object;
 
-    new-array p2, p1, [Ljava/lang/Object;
+    const-string p2, "BeautyShot"
 
-    const-string p3, "BeautyShot"
+    const-string p3, "BeautyShot is not initialized"
 
-    invoke-static {p3, p0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {p2, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return p1
+    return p0
 
     :cond_0
     move-object v0, p0
@@ -145,6 +245,7 @@
 
     move v7, p6
 
+    .line 3
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/beautyshot/BeautyShot;->processByBeautyLevel(Landroid/content/res/AssetManager;[BIIIII)I
 
     move-result p0
@@ -154,22 +255,42 @@
 
 .method public processBySmoothLevel([BIIIII)I
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "nv21data",
+            "width",
+            "height",
+            "orientation",
+            "region",
+            "smoothLevel"
+        }
+    .end annotation
 
+    .line 1
     iget-object v1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     if-nez v1, :cond_0
 
-    const-string p0, "BeautyShot is not initialized"
+    const/4 p0, 0x0
 
-    const/4 p1, 0x0
+    new-array p1, p0, [Ljava/lang/Object;
 
-    new-array p2, p1, [Ljava/lang/Object;
+    const-string p2, "BeautyShot"
 
-    const-string p3, "BeautyShot"
+    const-string p3, "BeautyShot is not initialized"
 
-    invoke-static {p3, p0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {p2, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return p1
+    return p0
 
     :cond_0
     move-object v0, p0
@@ -186,6 +307,7 @@
 
     move v7, p6
 
+    .line 3
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/beautyshot/BeautyShot;->processBySmoothLevel(Landroid/content/res/AssetManager;[BIIIII)I
 
     move-result p0
@@ -198,8 +320,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera/beautyshot/BeautyShot;->nativeUninit()V
 
     return-void

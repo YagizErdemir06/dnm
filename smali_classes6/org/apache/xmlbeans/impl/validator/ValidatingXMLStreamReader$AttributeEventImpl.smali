@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;
+.class public final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->class$org$apache$xmlbeans$impl$validator$ValidatingXMLStreamReader:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -72,6 +73,7 @@
 .method public static synthetic access$500(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;Ljavax/xml/stream/XMLStreamReader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->setXMLStreamReader(Ljavax/xml/stream/XMLStreamReader;)V
 
     return-void
@@ -80,6 +82,7 @@
 .method public static synthetic access$700(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->setAttributeIndex(I)V
 
     return-void
@@ -88,6 +91,7 @@
 .method private setAttributeIndex(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->_attIndex:I
 
     return-void
@@ -96,6 +100,7 @@
 .method private setXMLStreamReader(Ljavax/xml/stream/XMLStreamReader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
 
     return-void
@@ -106,6 +111,7 @@
 .method public getLocation()Ljavax/xml/stream/Location;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
 
     invoke-interface {p0}, Ljavax/xml/stream/XMLStreamReader;->getLocation()Ljavax/xml/stream/Location;
@@ -126,6 +132,7 @@
 .method public getName()Ljavax/xml/namespace/QName;
     .locals 3
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -149,6 +156,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
@@ -159,6 +167,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljavax/xml/namespace/QName;
 
     if-nez v0, :cond_2
@@ -182,6 +191,7 @@
 .method public getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -205,6 +215,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$AttributeEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
@@ -305,6 +316,7 @@
 .method public getXsiLoc()Ljava/lang/String;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -315,6 +327,7 @@
 .method public getXsiNil()Ljava/lang/String;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -325,6 +338,7 @@
 .method public getXsiNoLoc()Ljava/lang/String;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -335,6 +349,7 @@
 .method public getXsiType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -345,6 +360,7 @@
 .method public textIsWhitespace()Z
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

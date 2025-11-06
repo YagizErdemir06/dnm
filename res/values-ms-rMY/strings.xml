@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Butang untuk menangkap gambar semasa mengambil video</string>
     <string name="accessibility_video_pause_button">Rakaman video ditangguh</string>
     <string name="accessibility_video_resume_button">Rakaman video disambung</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Tera air dimatikan</string>
     <string name="accessibility_watermark_image_on">Tera air dihidupkan</string>
     <string name="accessibility_watermark_text">Buka panel pelarasan tera air</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Mod zum</string>
     <string name="actionbar_button_up_description">Kembali</string>
     <string name="afternoon">Petang</string>
-    <string name="agent_flip_tbc">Teruskan pada skrin dalaman</string>
-    <string name="agent_function_max">Dilaraskan kepada nilai maksimum</string>
-    <string name="agent_function_min">Dilaraskan kepada nilai minimum</string>
-    <string name="agent_workspace_mode_not_supported">Ciri ini tidak disokong</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Ciri ini tidak disokong.
-Buka Mod Foto sebaliknya."</string>
-    <string name="agent_workspace_on">Parameter ditetapkan untuk fotografi \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Mempelajari suasana</string>
-    <string name="agent_workspace_tbc_use_default">"Mempelajari suasana…
-Parameter kamera ditetapkan sebagai lalai"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Istana Amber</string>
     <string name="ai_baby">Bayi</string>
@@ -318,7 +307,7 @@ dan sesuaikan pilihan secara automatik"</string>
     <string name="aiwatermark_location_absent_hint">Gagal mendapatkan info lokasi</string>
     <string name="aiwatermark_location_list_title">Lokasi</string>
     <string name="aiwatermark_location_tips">Benarkan Kamera mengakses lokasi anda untuk mendapatkan watermark yang lebih relevan</string>
-    <string name="am">PG</string>
+    <string name="am">AM</string>
     <string name="ambient_lighting_need_flash_on_tip">Cahaya penuh akan dihidupkan apabila anda mengklik butang pengatup</string>
     <string name="ambient_lighting_not_adjust_ambient">Tidak dapat menggunakan kesan ini dengan flash</string>
     <string name="ambient_lighting_type_blue">Nilam</string>
@@ -781,7 +770,6 @@ meningkatkan dokumen yang disemak secara automatik"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Nampaknya peranti anda tidak disambungkan ke Wi-Fi. Gunakan %1$s MB data mudah alih untuk memuat turun item sekarang?</string>
     <string name="download_in_progress">Memuat turun…</string>
-    <string name="download_network_error">Gagal memuat turun. Semak tetapan rangkaian anda.</string>
     <string name="download_title">Amaran penggunaan data</string>
     <string name="download_waiting">Belum selesai…</string>
     <string name="dual_camera_lens_covered_toast">Kanta terlindung.</string>
@@ -1260,7 +1248,6 @@ objek kecil terlihat besar pada gambar"</string>
     <string name="miuix_appcompat_delete_description">Padam</string>
     <string name="miuix_appcompat_deselect_all">Nyahpilih semua</string>
     <string name="miuix_appcompat_deselect_all_description">Nyahpilih semua</string>
-    <string name="miuix_appcompat_edit">Edit</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Batal</string>
     <string name="miuix_appcompat_search_input_description">Cari</string>
     <string name="miuix_appcompat_select_all">Pilih semua</string>
@@ -1467,7 +1454,7 @@ Imej Ultra RAW menyimpan %d bit data, menyimpan lebih banyak maklumat."</string>
     <string name="pic_flaw_blink_one">Sepertinya orang yang berada di bingkai menutup mata mereka</string>
     <string name="pic_flaw_cover">Sepertinya lensanya sebahagiannya terlindung</string>
     <string name="pixel_mode_capture_hint">Pastikan persekitaran diterangi dengan baik</string>
-    <string name="pm">PTG</string>
+    <string name="pm">PM</string>
     <string name="popup_tip_3d_beauty_intro_text">Percantik 3D</string>
     <string name="popup_tips_near_range_mode">Tutup fokus</string>
     <string name="popup_tips_privacy_watermark_edit">Edit watermark</string>
@@ -2199,7 +2186,6 @@ Pastikan subjek jelas sambil mengaburkan latar belakang."</string>
     <string name="time_picker_label_hour">J</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Anda boleh membekukan dan nyahbeku latar belakang pada bila-bila masa sebelum atau semasa penggambaran.</string>
     <string name="timefreeze_guide_tip3">Minta subjek anda tetap berada di tengah bingkai.</string>
     <string name="timefreeze_guide_tip4">Menjadikan lalu lintas berhenti.</string>
@@ -2237,7 +2223,7 @@ Pastikan subjek jelas sambil mengaburkan latar belakang."</string>
     <string name="tip_flash_screen_light_on">Flash hadapan: Buka</string>
     <string name="tip_flash_soft_light_off">Flash hadapan: Mati</string>
     <string name="tip_flash_soft_light_torch">Flash hadapan: Mod Lampu Suluh</string>
-    <string name="tip_flash_torch">Flash: Lampu suluh</string>
+    <string name="tip_flash_torch">Flash: Sentiasa buka</string>
     <string name="tip_friend_mode_connect_when_24GHz">Gunakan %s sambungan GHz untuk meningkatkan kualiti pratonton</string>
     <string name="tip_friend_mode_display_device_name_connect">Pratonton dikongsi</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Peranti lain telah meninggalkan sesi ini</string>

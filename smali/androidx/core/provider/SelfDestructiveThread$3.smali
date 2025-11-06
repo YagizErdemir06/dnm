@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/SelfDestructiveThread$3;
+.class public Landroidx/core/provider/SelfDestructiveThread$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,23 +18,24 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/provider/SelfDestructiveThread;
+.field public final synthetic this$0:Landroidx/core/provider/SelfDestructiveThread;
 
-.field final synthetic val$callable:Ljava/util/concurrent/Callable;
+.field public final synthetic val$callable:Ljava/util/concurrent/Callable;
 
-.field final synthetic val$cond:Ljava/util/concurrent/locks/Condition;
+.field public final synthetic val$cond:Ljava/util/concurrent/locks/Condition;
 
-.field final synthetic val$holder:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic val$holder:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field final synthetic val$lock:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final synthetic val$lock:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field final synthetic val$running:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic val$running:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread$3;->this$0:Landroidx/core/provider/SelfDestructiveThread;
 
     iput-object p2, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$holder:Ljava/util/concurrent/atomic/AtomicReference;
@@ -57,6 +58,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$holder:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -70,11 +72,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     :catch_0
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$lock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 3
     :try_start_1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$running:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -82,12 +86,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 4
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$cond:Ljava/util/concurrent/locks/Condition;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signal()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     iget-object p0, p0, Landroidx/core/provider/SelfDestructiveThread$3;->val$lock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -101,5 +107,6 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 6
     throw v0
 .end method

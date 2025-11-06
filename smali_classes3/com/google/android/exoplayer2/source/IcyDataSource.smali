@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/IcyDataSource;
+.class public final Lcom/google/android/exoplayer2/source/IcyDataSource;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/DataSource;ILcom/google/android/exoplayer2/source/IcyDataSource$Listener;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
@@ -43,19 +44,25 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
+    .line 4
     iput p2, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->metadataIntervalBytes:I
 
+    .line 5
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->listener:Lcom/google/android/exoplayer2/source/IcyDataSource$Listener;
 
     new-array p1, v0, [B
 
+    .line 6
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->metadataLengthByteHolder:[B
 
+    .line 7
     iput p2, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->bytesUntilMetadata:I
 
     return-void
@@ -69,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->metadataLengthByteHolder:[B
@@ -87,6 +95,7 @@
 
     return v2
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->metadataLengthByteHolder:[B
 
@@ -100,6 +109,7 @@
 
     return v3
 
+    .line 3
     :cond_1
     new-array v4, v0, [B
 
@@ -110,6 +120,7 @@
     :goto_0
     if-lez v5, :cond_3
 
+    .line 4
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {v7, v4, v6, v5}, Lcom/google/android/exoplayer2/upstream/DataReader;->read([BII)I
@@ -133,6 +144,7 @@
 
     add-int/lit8 v1, v0, -0x1
 
+    .line 5
     aget-byte v1, v4, v1
 
     if-nez v1, :cond_4
@@ -144,6 +156,7 @@
     :cond_4
     if-lez v0, :cond_5
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->listener:Lcom/google/android/exoplayer2/source/IcyDataSource$Listener;
 
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -161,8 +174,10 @@
 .method public addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/upstream/DataSource;->addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
@@ -173,6 +188,7 @@
 .method public close()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -193,6 +209,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource;->getResponseHeaders()Ljava/util/Map;
@@ -207,6 +224,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource;->getUri()Landroid/net/Uri;
@@ -219,6 +237,7 @@
 .method public open(Lcom/google/android/exoplayer2/upstream/DataSpec;)J
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -234,18 +253,21 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->bytesUntilMetadata:I
 
     const/4 v1, -0x1
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/IcyDataSource;->readMetadata()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->metadataIntervalBytes:I
 
     iput v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->bytesUntilMetadata:I
@@ -255,6 +277,7 @@
     :cond_0
     return v1
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
@@ -271,6 +294,7 @@
 
     if-eq p1, v1, :cond_2
 
+    .line 5
     iget p2, p0, Lcom/google/android/exoplayer2/source/IcyDataSource;->bytesUntilMetadata:I
 
     sub-int/2addr p2, p1

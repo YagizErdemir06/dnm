@@ -15,5 +15,19 @@
 
 
 # virtual methods
-.method public abstract o5(Landroid/view/View;FII)V
+.method public abstract m3(Landroid/view/View;FII)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "viewX",
+            "currentValue",
+            "step"
+        }
+    .end annotation
 .end method
